@@ -1,60 +1,22 @@
 Anthem — 2015
-
-
 OPM (U.S. Office of Personnel Management) — 2015
-
-
 Adobe — 2013
-
-
 Heartland Payment Systems — 2008
-
-
 TJX (TJ Maxx) — 2007
-
-
 RSA SecurID — 2011
-
-
 Mt. Gox — 2014
-
-
 Uber — 2016
-
-
 Home Depot — 2014
-
-
 LinkedIn — 2012
-
-
 Dropbox — 2012
-
-
 Operation Aurora (Google) — 2009
-
-
 Dyn / Mirai DDoS — 2016
-
-
 Maersk (NotPetya impact) — 2017
-
-
 FedEx / TNT (NotPetya impact) — 2017
-
-
 Ukrainian power grid — 2015
-
-
 PlayStation Network (Sony) — 2011
-
-
 Hacking Team leak — 2015
-
-
 Vault 7 (CIA leaks) — 2017
-
-
 Shadow Brokers leak — 2016
 
 
@@ -595,4 +557,5 @@ Reddit Breach — 2024
 
 
 Ticketmaster Data Breach — 2024
+
 
