@@ -175,6 +175,21 @@
                     }
                 });
 
+				// --- Custom manual edge: Credential Access → Collection ---
+				const credAccessNode = mitreData.techniques.findIndex(t => t.tactic === "credential-access") + 1;
+				const collectionNode = mitreData.techniques.findIndex(t => t.tactic === "collection") + 1;
+
+				if (credAccessNode > 0 && collectionNode > 0) {
+					edges.push({
+						from: credAccessNode,
+						to: collectionNode,
+						arrows: "to",
+						color: { color: "blue" },
+						width: 2
+					});
+				}
+
+
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
                 const options = {
