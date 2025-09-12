@@ -186,6 +186,15 @@
                         }
                     }
                 });
+				
+				// ✅ Manually connect Execution → Privilege Escalation
+					const executionNode = mitreData.techniques.findIndex(t => t.tactic === "execution") + 1;
+					const privEscNode = mitreData.techniques.findIndex(t => t.tactic === "privilege-escalation") + 1;
+
+					if (executionNode > 0 && privEscNode > 0) {
+						edges.push({ from: executionNode, to: privEscNode, arrows: "to", color: { color: "red" } });
+					}
+
 
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
