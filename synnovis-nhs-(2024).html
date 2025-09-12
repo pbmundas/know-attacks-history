@@ -175,6 +175,22 @@
                     }
                 });
 
+				// Add explicit cross-tactic links: execution -> privilege-escalation and discovery -> collection
+				const addCrossTacticLinks = (fromTactic, toTactic) => {
+					if (!tacticNodes[fromTactic] || !tacticNodes[toTactic]) return;
+					tacticNodes[fromTactic].forEach(fromId => {
+						tacticNodes[toTactic].forEach(toId => {
+							// avoid duplicate edges
+							const exists = edges.some(e => e.from === fromId && e.to === toId);
+							if (!exists) edges.push({ from: fromId, to: toId, arrows: "to" });
+						});
+					});
+				};
+
+				addCrossTacticLinks("execution", "privilege-escalation");
+				addCrossTacticLinks("discovery", "collection");
+
+
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
                 const options = {
