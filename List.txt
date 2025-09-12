@@ -3,9 +3,7 @@ OPM (U.S. Office of Personnel Management) — 2015
 Adobe — 2013
 Heartland Payment Systems — 2008
 TJX (TJ Maxx) — 2007
-RSA SecurID — 2011
 Mt. Gox — 2014
-Uber — 2016
 Home Depot — 2014
 LinkedIn — 2012
 Dropbox — 2012
@@ -13,7 +11,6 @@ Operation Aurora (Google) — 2009
 Dyn / Mirai DDoS — 2016
 Maersk (NotPetya impact) — 2017
 FedEx / TNT (NotPetya impact) — 2017
-Ukrainian power grid — 2015
 PlayStation Network (Sony) — 2011
 Hacking Team leak — 2015
 Vault 7 (CIA leaks) — 2017
@@ -29,16 +26,10 @@ Binance — 2019
 Crypto.com — 2022
 
 
-Kaseya / REvil supply-chain — 2021
-
-
 Garmin (WastedLocker) — 2020
 
 
 Travelex (Sodinokibi) — 2020
-
-
-Capital One — 2019
 
 
 Microsoft Exchange (Hafnium) — 2021
@@ -243,10 +234,6 @@ Anthem Healthcare Breach — 2015
 
 OPM Breach — 2015
 
-
-Ukraine Power Grid — 2015
-
-
 Hacking Team Breach — 2015
 
 
@@ -321,10 +308,6 @@ SingHealth Breach (Singapore) — 2018
 
 Airbus Supplier Breach — 2019
 
-
-Capital One Breach — 2019
-
-
 Wipro Breach — 2019
 
 
@@ -342,18 +325,10 @@ Suprema Biostar Breach — 2019
 
 Zynga Breach — 2019
 
-
-MGM Resorts Breach — 2020
-
-
 Garmin Ransomware — 2020
 
 
 University of California, San Francisco Ransomware — 2020
-
-
-Twitter Celebrity Hacks — 2020
-
 
 Nintendo Breach — 2020
 
@@ -363,10 +338,6 @@ EasyJet Breach — 2020
 
 Travelex Ransomware — 2020
 
-
-SolarWinds Supply Chain — 2020
-
-
 FireEye Breach — 2020
 
 
@@ -375,15 +346,7 @@ Accellion FTA Breach — 2021
 
 Facebook 533M Data Leak — 2021
 
-
-Colonial Pipeline — 2021
-
-
 JBS Meatpacker Ransomware — 2021
-
-
-Kaseya / REvil — 2021
-
 
 Acer Ransomware — 2021
 
@@ -395,10 +358,6 @@ Robinhood Data Breach — 2021
 
 
 Twitch Data Leak — 2021
-
-
-Log4Shell Exploits — 2021
-
 
 Red Cross Data Breach — 2022
 
@@ -557,5 +516,6 @@ Reddit Breach — 2024
 
 
 Ticketmaster Data Breach — 2024
+
 
 
