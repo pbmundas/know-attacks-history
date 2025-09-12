@@ -199,6 +199,26 @@
                     }
                 });
 
+				// --- Custom manual path: Execution -> Privilege Escalation -> Defense Evasion -> Credential Access ---
+
+				// Find node IDs by tactic
+				const execNode = mitreData.techniques.findIndex(t => t.tactic === "execution") + 1;
+				const peNode = mitreData.techniques.findIndex(t => t.tactic === "privilege-escalation") + 1;
+				const deNode = mitreData.techniques.findIndex(t => t.tactic === "defense-evasion") + 1;
+				const caNode = mitreData.techniques.findIndex(t => t.tactic === "credential-access") + 1;
+
+				// Add custom edges if all nodes exist
+				if (execNode > 0 && peNode > 0) {
+				  edges.push({ from: execNode, to: peNode, arrows: "to", color: { color: "#2563eb" }, width: 2 });
+				}
+				if (peNode > 0 && deNode > 0) {
+				  edges.push({ from: peNode, to: deNode, arrows: "to", color: { color: "#2563eb" }, dashes: true, width: 2 });
+				}
+				if (deNode > 0 && caNode > 0) {
+				  edges.push({ from: deNode, to: caNode, arrows: "to", color: { color: "#2563eb" }, width: 2 });
+				}
+
+
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
                 const options = {
