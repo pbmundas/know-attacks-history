@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,6 +187,22 @@
                         }
                     }
                 });
+				
+								// --- Custom manual edges ---
+				const privEscNode = mitreData.techniques.findIndex(t => t.tactic === "privilege-escalation") + 1;
+				const defEvNode   = mitreData.techniques.findIndex(t => t.tactic === "defense-evasion") + 1;
+				const discNode    = mitreData.techniques.findIndex(t => t.tactic === "discovery") + 1;
+
+				// Privilege Escalation → Defense Evasion
+				if (privEscNode > 0 && defEvNode > 0) {
+					edges.push({ from: privEscNode, to: defEvNode, arrows: "to", color: { color: "red" }, dashes: true });
+				}
+
+				// Defense Evasion → Discovery
+				if (defEvNode > 0 && discNode > 0) {
+					edges.push({ from: defEvNode, to: discNode, arrows: "to", color: { color: "blue" }, width: 2 });
+				}
+
 
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
