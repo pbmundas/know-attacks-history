@@ -187,6 +187,21 @@
                     }
                 });
 
+				// --- Custom manual edge: Lateral Movement → Collection ---
+				const latMoveNode = mitreData.techniques.findIndex(t => t.tactic === "lateral-movement") + 1;
+				const collNode    = mitreData.techniques.findIndex(t => t.tactic === "collection") + 1;
+
+				if (latMoveNode > 0 && collNode > 0) {
+					edges.push({
+						from: latMoveNode,
+						to: collNode,
+						arrows: "to",
+						color: { color: "green" },
+						width: 2
+					});
+				}
+
+
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
                 const options = {
