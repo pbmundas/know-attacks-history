@@ -259,6 +259,13 @@
                     }
                 });
 
+				const firstDiscovery = mitreData.techniques.findIndex(t => t.tactic === "discovery") + 1;
+				const c2Node = mitreData.techniques.findIndex(t => t.tactic === "command-and-control") + 1;
+				if (firstDiscovery > 0 && c2Node > 0) {
+				  edges.push({ from: firstDiscovery, to: c2Node, arrows: "to", color: { color: "#22c55e" }, dashes: true });
+				}
+
+
                 const container = flowchartRef.current;
                 const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
                 const options = {
