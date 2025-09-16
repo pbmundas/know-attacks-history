@@ -292,5 +292,118 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Pre-March 2019</td>
+                        <td class="py-2 px-4 border-b">Preparation: Thompson identifies Capital One’s vulnerable AWS setup.</td>
+                        <td class="py-2 px-4 border-b">Paige A. Thompson (former AWS engineer)</td>
+                        <td class="py-2 px-4 border-b">Used prior AWS knowledge; targeted misconfigured WAF.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 22–23, 2019</td>
+                        <td class="py-2 px-4 border-b">Initial access and exfiltration: Thompson exploits SSRF in misconfigured WAF to access S3 buckets.</td>
+                        <td class="py-2 px-4 border-b">Paige A. Thompson</td>
+                        <td class="py-2 px-4 border-b">30 GB of data stolen, including 140,000 SSNs, 80,000 bank accounts, 1M Canadian SINs.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 17, 2019</td>
+                        <td class="py-2 px-4 border-b">Detection: Ethical researcher tips Capital One via Responsible Disclosure Program.</td>
+                        <td class="py-2 px-4 border-b">Security researcher</td>
+                        <td class="py-2 px-4 border-b">Reported leaked data on GitHub; Capital One investigates.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 29, 2019</td>
+                        <td class="py-2 px-4 border-b">Disclosure and arrest: Capital One announces breach; FBI arrests Thompson.</td>
+                        <td class="py-2 px-4 border-b">Capital One/FBI</td>
+                        <td class="py-2 px-4 border-b">Thompson’s online boasts (alias “erratic”) lead to arrest; 106M records affected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 2020</td>
+                        <td class="py-2 px-4 border-b">Penalty: OCC fines Capital One $80 million for cybersecurity failures.</td>
+                        <td class="py-2 px-4 border-b">OCC</td>
+                        <td class="py-2 px-4 border-b">Cites inadequate risk management, cloud security gaps.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 2021</td>
+                        <td class="py-2 px-4 border-b">Settlement: Capital One agrees to $190 million class-action settlement.</td>
+                        <td class="py-2 px-4 border-b">Capital One</td>
+                        <td class="py-2 px-4 border-b">Covers customer compensation, legal fees; no fraud reported from data.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 2021</td>
+                        <td class="py-2 px-4 border-b">Conviction: Thompson found guilty of wire fraud, unauthorized access.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Sentenced to time served plus probation; mental health issues noted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 117 days (March 22 to July 17, 2019), from initial access to detection, due to misconfigured WAF and lack of cloud monitoring.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Mar 22)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Spread (Mar 22–23)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Jul 17)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Jul 2019–2021)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">SSRF attack via misconfigured WAF. <br><strong>What went wrong</strong>: Poor cloud configuration, no IAM restrictions.</td>
+                        <td class="py-2 px-4 border-b">30 GB of data exfiltrated from S3 buckets. <br><strong>Factor</strong>: No cloud monitoring, no DLP.</td>
+                        <td class="py-2 px-4 border-b">Ethical researcher’s tip; access revoked. <br><strong>Factor</strong>: No internal IDS; rapid containment post-detection.</td>
+                        <td class="py-2 px-4 border-b">Notified customers, settled lawsuits, fixed WAF. <br><strong>Total time</strong>: $80M fine, $190M settlement.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time (117 days vs. 2019 median ~56 days) was prolonged due to misconfigured cloud infrastructure and no monitoring. Detection relied on an external tip, exposing cloud security gaps. Swift containment prevented further exfiltration.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Misconfigured WAF. Why misconfigured? No cloud security expertise. Why no expertise? Inadequate training. Why inadequate? Cost focus. Why cost focus? Profit priority. <br> <strong>Other causes</strong>: No IAM restrictions, no cloud DLP. <br> <strong>Beginners</strong>: Root causes trace to cloud misconfiguration. <br> <strong>Experts</strong>: Fishbone factors: Process (no cloud audits), Technology (no IAM), People (untrained staff).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 106M records, 140,000 SSNs, 80,000 bank accounts, 1M SINs. <br> <strong>Financial</strong>: $80M fine, $190M settlement, $100–150M total cost. <br> <strong>Reputational</strong>: Trust erosion, lawsuits. <br> <strong>Beginners</strong>: Impacts hit finances, reputation. <br> <strong>Experts</strong>: BIA metrics: RPO minimal, RTO months for recovery.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: SSRF via cloud logs; exfiltration via DLP. <br> <strong>Opportunities</strong>: IAM restrictions, cloud monitoring, DLP. <br> <strong>Failures</strong>: No IDS, no internal detection. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: cloud | selection: service: s3 AND attack: ssrf</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Revoked access, notified customers. <br> <strong>Long-term</strong>: Fixed WAF, added IAM, DLP; settled lawsuits. <br> <strong>Beginners</strong>: Response restores trust. <br> <strong>Experts</strong>: NIST IR followed: Identification (Jul 17), Containment (Jul), Eradication (Jul–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Paige A. Thompson (lone actor). <br> <strong>TTPs</strong>: SSRF, cloud misconfiguration exploit. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include GitHub posts, S3 bucket access logs.</td>
+                        <td class="py-2 px-4 border-b">Secure cloud configurations. <br> Enforce IAM, DLP. <br> Train on cloud security. <br> Audit AWS setups. <br> <strong>Beginners</strong>: Secure cloud, monitor access. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, zero-trust for cloud.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
