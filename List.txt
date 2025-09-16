@@ -5,7 +5,6 @@ Heartland Payment Systems — 2008
 TJX (TJ Maxx) — 2007
 Mt. Gox — 2014
 Home Depot — 2014
-LinkedIn — 2012
 Dropbox — 2012
 Operation Aurora (Google) — 2009
 Dyn / Mirai DDoS — 2016
@@ -282,8 +281,6 @@ MyHeritage Breach — 2018
 Cathay Pacific Breach — 2018
 
 
-British Airways Breach — 2018
-
 
 Quora Breach — 2018
 
@@ -516,6 +513,7 @@ Reddit Breach — 2024
 
 
 Ticketmaster Data Breach — 2024
+
 
 
 
