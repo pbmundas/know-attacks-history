@@ -347,5 +347,118 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Pre-March 2020</td>
+                        <td class="py-2 px-4 border-b">Preparation: Attackers compromise SolarWinds Orion updates with SUNBURST malware.</td>
+                        <td class="py-2 px-4 border-b">Suspected Russian SVR (Cozy Bear/APT29)</td>
+                        <td class="py-2 px-4 border-b">Trojanized updates (versions 2019.4–2020.2.1 HF1) distributed to 18,000+ customers, including FireEye.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">~March 2020</td>
+                        <td class="py-2 px-4 border-b">Initial access: Attackers infiltrate FireEye’s network via SUNBURST backdoor in Orion software.</td>
+                        <td class="py-2 px-4 border-b">SVR (suspected)</td>
+                        <td class="py-2 px-4 border-b">Access to internal systems; reconnaissance begins undetected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March–December 2020</td>
+                        <td class="py-2 px-4 border-b">Data theft: Attackers steal red team tools, target government client data.</td>
+                        <td class="py-2 px-4 border-b">SVR (suspected)</td>
+                        <td class="py-2 px-4 border-b">Tools replicate advanced hacking techniques; no zero-day exploits; no customer data exfiltrated.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 8, 2020</td>
+                        <td class="py-2 px-4 border-b">Detection and disclosure: FireEye identifies breach, announces publicly, releases countermeasures.</td>
+                        <td class="py-2 px-4 border-b">FireEye/CEO Kevin Mandia</td>
+                        <td class="py-2 px-4 border-b">Blog post details attack; 300+ countermeasures published on GitHub; FBI notified.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 13, 2020</td>
+                        <td class="py-2 px-4 border-b">Investigation links to SolarWinds: FireEye identifies SUNBURST in Orion updates as attack vector.</td>
+                        <td class="py-2 px-4 border-b">FireEye</td>
+                        <td class="py-2 px-4 border-b">Triggers broader investigation; 18,000 organizations potentially affected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 15, 2020</td>
+                        <td class="py-2 px-4 border-b">Mitigation: FireEye, Microsoft, GoDaddy deploy kill switch for SUNBURST.</td>
+                        <td class="py-2 px-4 border-b">FireEye/Microsoft/GoDaddy</td>
+                        <td class="py-2 px-4 border-b">Command-and-control domain repurposed to block malware; Microsoft Defender updated.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 2020–2021</td>
+                        <td class="py-2 px-4 border-b">Response: FireEye collaborates with FBI, Microsoft; resets passwords, enhances security.</td>
+                        <td class="py-2 px-4 border-b">FireEye/FBI/Microsoft</td>
+                        <td class="py-2 px-4 border-b">No evidence of stolen tools used; stock drops 7–8% in after-hours trading.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 9 months (~March to December 8, 2020), from initial access to detection, due to the stealth of SUNBURST and lack of supply-chain monitoring.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (~Mar 2020)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Spread (Mar–Dec 2020)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Dec 8, 2020)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Dec 2020–2021)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">SUNBURST backdoor via Orion update. <br><strong>What went wrong</strong>: Trusted software supply chain, no anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Tools stolen, government client data targeted. <br><strong>Factor</strong>: Novel TTPs evaded FireEye’s defenses.</td>
+                        <td class="py-2 px-4 border-b">FireEye detects anomaly; releases countermeasures. <br><strong>Factor</strong>: Internal detection; rapid public disclosure.</td>
+                        <td class="py-2 px-4 border-b">Password resets, kill switch deployed, tools neutralized. <br><strong>Total time</strong>: Stock drop, no direct fines.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time (~270 days vs. 2020 median ~95 days) was extended due to the sophisticated SUNBURST malware mimicking legitimate traffic and FireEye’s reliance on a trusted third-party (SolarWinds). Internal detection and rapid countermeasure release mitigated further damage, but the breach exposed supply-chain vulnerabilities.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? SUNBURST in Orion update. Why infected? Compromised SolarWinds supply chain. Why compromised? No supply-chain audits. Why no audits? Industry trust in vendors. Why trust? No standard for verification. <br> <strong>Other causes</strong>: No anomaly detection for trusted software. <br> <strong>Beginners</strong>: Root causes trace to third-party trust. <br> <strong>Experts</strong>: Fishbone factors: Process (no vendor audits), Technology (no IDS for supply chain), Supply Chain (SolarWinds).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: Red team tools stolen, no customer data exfiltrated. <br> <strong>Financial</strong>: 7–8% stock drop, no direct fines. <br> <strong>Reputational</strong>: Trust erosion as cybersecurity leader hacked. <br> <strong>Beginners</strong>: Impacts hit reputation, market value. <br> <strong>Experts</strong>: BIA metrics: RPO minimal, RTO days for countermeasures.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: SUNBURST via IDS; supply-chain anomalies via SIEM. <br> <strong>Opportunities</strong>: Vendor code auditing, behavioral analytics. <br> <strong>Failures</strong>: No supply-chain monitoring. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: network | selection: traffic: solarwinds AND anomaly: sunburst</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Released 300+ countermeasures, notified FBI. <br> <strong>Long-term</strong>: Enhanced supply-chain checks, collaborated with Microsoft. <br> <strong>Beginners</strong>: Response limits damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Dec 8), Containment (Dec 8–15), Eradication (Dec–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: Russian SVR (Cozy Bear/APT29). <br> <strong>TTPs</strong>: SUNBURST, supply-chain attack align with APT29. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include Orion update hashes, C2 IPs.</td>
+                        <td class="py-2 px-4 border-b">Audit supply chain. <br> Deploy SIEM, behavioral analytics. <br> Verify vendor software. <br> Adopt zero-trust. <br> <strong>Beginners</strong>: Secure third-party software, monitor networks. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, supply-chain security frameworks.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
