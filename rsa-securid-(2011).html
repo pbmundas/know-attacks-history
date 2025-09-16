@@ -347,5 +347,127 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Early March 2011</td>
+                        <td class="py-2 px-4 border-b">Spearphishing emails sent to RSA employees with malicious Excel attachment.</td>
+                        <td class="py-2 px-4 border-b">Chinese state-sponsored group (suspected PLA Unit 61398)</td>
+                        <td class="py-2 px-4 border-b">Emails titled “2011 Recruitment Plan.xls” exploited Adobe Flash zero-day.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 1-3, 2011</td>
+                        <td class="py-2 px-4 border-b">Initial access: Poison Ivy RAT deployed via phishing payload.</td>
+                        <td class="py-2 px-4 border-b">Attackers</td>
+                        <td class="py-2 px-4 border-b">Compromised employee workstations; backdoor established.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 2011</td>
+                        <td class="py-2 px-4 border-b">Persistence and escalation: Backdoors and stolen credentials used to access sensitive systems.</td>
+                        <td class="py-2 px-4 border-b">Attackers</td>
+                        <td class="py-2 px-4 border-b">Access to SecurID seed data servers.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Mid-March 2011</td>
+                        <td class="py-2 px-4 border-b">Data collection and exfiltration: SecurID token seed data stolen via FTP.</td>
+                        <td class="py-2 px-4 border-b">Attackers</td>
+                        <td class="py-2 px-4 border-b">Password-protected RAR files exfiltrated; used in later attacks on defense contractors.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 17, 2011</td>
+                        <td class="py-2 px-4 border-b">RSA detects anomalous activity; breach investigation begins.</td>
+                        <td class="py-2 px-4 border-b">RSA Security</td>
+                        <td class="py-2 px-4 border-b">Internal monitoring flagged unauthorized access.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 18, 2011</td>
+                        <td class="py-2 px-4 border-b">RSA confirms breach; notifies customers and engages incident response.</td>
+                        <td class="py-2 px-4 border-b">RSA</td>
+                        <td class="py-2 px-4 border-b">Public disclosure via open letter; no specific victim data stolen.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 2011</td>
+                        <td class="py-2 px-4 border-b">Remediation: RSA replaces 40 million SecurID tokens for customers.</td>
+                        <td class="py-2 px-4 border-b">RSA</td>
+                        <td class="py-2 px-4 border-b">$66 million in costs; reputational damage.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May-June 2011</td>
+                        <td class="py-2 px-4 border-b">Follow-on attacks: Stolen SecurID data used against Lockheed Martin and others.</td>
+                        <td class="py-2 px-4 border-b">Attackers</td>
+                        <td class="py-2 px-4 border-b">Compromised contractor systems; broader defense sector impact.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 14-20 days (early March to March 17, 2011), the period attackers operated undetected in RSA’s network. This allowed phishing, persistence, escalation, and data exfiltration.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Early March)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Persistence (March)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Privilege Escalation (March)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Exfiltration (Mid-March)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection (March 17)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spearphishing with Adobe Flash zero-day via Excel attachment. <br><strong>What went wrong</strong>: Lack of email filtering and user awareness.</td>
+                        <td class="py-2 px-4 border-b">Deployed Poison Ivy RAT for backdoor access. <br><strong>Factor</strong>: No endpoint detection for RAT behavior.</td>
+                        <td class="py-2 px-4 border-b">Used stolen credentials to access SecurID servers. <br><strong>Factor</strong>: Weak privilege management.</td>
+                        <td class="py-2 px-4 border-b">Exfiltrated seed data via FTP in RAR files. <br><strong>Factor</strong>: No egress filtering for FTP traffic.</td>
+                        <td class="py-2 px-4 border-b">Anomalous access detected via internal monitoring. <br><strong>Total time</strong>: Enabled theft of critical SecurID data.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The short dwell time was like a quick heist, but sufficient for significant data theft due to targeted phishing. Experts: Median dwell time in 2011 was ~200 days (per Mandiant); RSA’s ~15 days was short but impactful due to sensitive data.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Phishing with zero-day. Why successful? No email filtering. Why no filtering? Weak email security policies. Why weak? Underinvestment in threat awareness. Why underinvested? Prioritized product over security. <br> <strong>Other causes</strong>: No EDR for RAT detection, poor privilege controls, no FTP egress monitoring. <br> <strong>Beginners</strong>: Root causes find the "why" of breaches. <br> <strong>Experts</strong>: Fishbone factors: People (user error), Process (no email filters), Technology (no EDR).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: SecurID seed data stolen; no customer PII reported. <br> <strong>Financial</strong>: $66M in remediation (token replacement). <br> <strong>Reputational</strong>: Trust erosion; impacted EMC (RSA’s parent). <br> <strong>Follow-on</strong>: Enabled attacks on Lockheed Martin. <br> <strong>Beginners</strong>: Impacts hit trust and costs. <br> <strong>Experts</strong>: BIA metrics: RTO exceeded due to token replacement delays.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Phishing emails could have been caught with gateways; RAT behavior with EDR; FTP transfers with DLP. <br> <strong>Opportunities</strong>: Deploy email sandboxing, monitor privilege escalation, log FTP egress. <br> <strong>Failures</strong>: No zero-day detection, short log retention. <br> <strong>Beginners</strong>: Detection is like a security camera. <br> <strong>Experts</strong>: Sigma rule example: <code>detection: logsource: category: network | selection: Protocol: FTP AND Destination: external</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Isolated systems, notified customers, engaged IR team. <br> <strong>Long-term</strong>: Enhanced email filtering, EDR deployment, privileged access management, token replacement. <br> <strong>Beginners</strong>: Response is damage control. <br> <strong>Experts</strong>: Followed NIST IR: Identification (March 17), Containment (March), Eradication (April).</td>
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: Chinese state-sponsored (PLA Unit 61398) per FireEye. <br> <strong>TTPs</strong>: Spearphishing, Poison Ivy, FTP exfiltration align with APT28-like groups. <br> <strong>Beginners</strong>: Attribution is whodunit. <br> <strong>Experts</strong>: TTPs match Chinese APTs; no public IOCs for deniability.</td>
+                        <td class="py-2 px-4 border-b">Filter phishing emails. <br> Deploy EDR and DLP. <br> Enforce least privilege. <br> Monitor egress traffic. <br> Train on APT threats. <br> <strong>Beginners</strong>: Learn to block targeted attacks. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for APT defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+          </div>
 </body>
 </html>
