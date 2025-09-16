@@ -292,5 +292,125 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <!-- Attack Timeline -->
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Early 2012</td>
+                        <td class="py-2 px-4 border-b">Initial breach: Attackers exploit unspecified vulnerability in LinkedIn’s database.</td>
+                        <td class="py-2 px-4 border-b">Russian cybercriminals (suspected)</td>
+                        <td class="py-2 px-4 border-b">Accessed unsalted SHA-1 hashed passwords and emails.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March-April 2012</td>
+                        <td class="py-2 px-4 border-b">Data exfiltration: ~6.5 million account credentials stolen.</td>
+                        <td class="py-2 px-4 border-b">Attackers</td>
+                        <td class="py-2 px-4 border-b">Data staged for exfiltration; no immediate detection.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 5, 2012</td>
+                        <td class="py-2 px-4 border-b">Stolen data posted on Russian hacker forum, requesting Bitcoin payment.</td>
+                        <td class="py-2 px-4 border-b">Hacker “Peace”</td>
+                        <td class="py-2 px-4 border-b">6.5 million unsalted SHA-1 hashes exposed; passwords cracked.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 6, 2012</td>
+                        <td class="py-2 px-4 border-b">LinkedIn confirms breach after user reports; initiates investigation.</td>
+                        <td class="py-2 px-4 border-b">LinkedIn</td>
+                        <td class="py-2 px-4 border-b">Public disclosure; password reset emails sent to affected users.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 2012</td>
+                        <td class="py-2 px-4 border-b">Remediation: LinkedIn invalidates exposed passwords, notifies users.</td>
+                        <td class="py-2 px-4 border-b">LinkedIn</td>
+                        <td class="py-2 px-4 border-b">No immediate financial loss reported; reputational hit.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 2016</td>
+                        <td class="py-2 px-4 border-b">Additional 117 million records from 2012 breach surface on dark web.</td>
+                        <td class="py-2 px-4 border-b">Hacker “Peace”</td>
+                        <td class="py-2 px-4 border-b">Total impact: 167 million accounts; LinkedIn confirms expanded scope.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 2016</td>
+                        <td class="py-2 px-4 border-b">Enhanced remediation: Additional password resets, bcrypt hashing implemented.</td>
+                        <td class="py-2 px-4 border-b">LinkedIn</td>
+                        <td class="py-2 px-4 border-b">$1-5 million estimated remediation costs; lawsuits filed.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">2017</td>
+                        <td class="py-2 px-4 border-b">Legal resolution: LinkedIn settles class-action lawsuit for $1.25 million.</td>
+                        <td class="py-2 px-4 border-b">LinkedIn</td>
+                        <td class="py-2 px-4 border-b">Ongoing trust erosion; regulatory scrutiny increased.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 60-90 days (early 2012 to June 5, 2012), the period attackers operated undetected in LinkedIn’s systems. This allowed data collection and exfiltration before public exposure.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Early 2012)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection (March-April)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Exfiltration (March-April)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Detection (June 5, 2012)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Exploited unspecified database vulnerability. <br><strong>What went wrong</strong>: Unpatched system or weak access controls.</td>
+                        <td class="py-2 px-4 border-b">Queried database for user credentials (unsalted SHA-1 hashes, emails). <br><strong>Factor</strong>: No anomaly detection for database queries.</td>
+                        <td class="py-2 px-4 border-b">Exfiltrated ~6.5 million (later 117 million) records to external servers. <br><strong>Factor</strong>: No egress filtering or DLP.</td>
+                        <td class="py-2 px-4 border-b">Hacker posted data publicly, triggering LinkedIn’s response. <br><strong>Total time</strong>: Enabled theft of 167 million accounts.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a thief looting a vault unnoticed, amplified by weak hashing. Experts: Median dwell time in 2012 was ~200 days (per Mandiant); LinkedIn’s 60-90 days was typical but damaging due to unsalted hashes.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Database vulnerability. Why exploited? Unpatched or misconfigured system. Why unpatched? No asset inventory or patch management. Why no inventory? Siloed security practices. Why siloed? Prioritized growth over security. <br> <strong>Other causes</strong>: Unsalted SHA-1 hashes, no DLP for exfiltration, short log retention. <br> <strong>Beginners</strong>: Root causes trace failure points. <br> <strong>Experts</strong>: Fishbone factors: Technology (weak hashing), Process (no patch policy), People (security oversight).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 167 million accounts (emails, unsalted SHA-1 hashes). <br> <strong>Financial</strong>: $1-5M remediation; $1.25M lawsuit settlement. <br> <strong>Reputational</strong>: Trust erosion; user churn reported. <br> <strong>Regulatory</strong>: Increased scrutiny; GDPR precursor concerns. <br> <strong>Beginners</strong>: Impacts hit users and brand. <br> <strong>Experts</strong>: BIA metrics: RTO delayed by public exposure.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Query spikes could have been caught with SIEM; exfiltration with DLP. <br> <strong>Opportunities</strong>: Monitor database access, deploy DLP, use salted hashes (e.g., bcrypt). <br> <strong>Failures</strong>: No query anomaly detection, no egress controls. <br> <strong>Beginners</strong>: Detection is like a burglar alarm. <br> <strong>Experts</strong>: Sigma rule example: <code>detection: logsource: category: database | selection: event: query_count > 500 in 1h</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Invalidated passwords, notified users, investigated scope. <br> <strong>Long-term</strong>: Implemented bcrypt, enhanced DLP, improved patch management. <br> <strong>Beginners</strong>: Response is cleanup. <br> <strong>Experts</strong>: Followed NIST IR: Identification (June), Containment (June), Eradication (2016).</td>
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: Russian cybercriminals (hacker “Peace”). <br> <strong>TTPs</strong>: Database exploitation, dark web data sale align with cybercrime groups. <br> <strong>Beginners</strong>: Attribution is identifying culprits. <br> <strong>Experts</strong>: TTPs match Russian data breach patterns; limited IOCs due to dark web anonymity.</td>
+                        <td class="py-2 px-4 border-b">Use strong hashing (e.g., bcrypt). <br> Patch systems promptly. <br> Deploy DLP and SIEM. <br> Maintain asset inventories. <br> Monitor database queries. <br> <strong>Beginners</strong>: Secure data storage. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for data breach defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
