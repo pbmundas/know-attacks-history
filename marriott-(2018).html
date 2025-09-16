@@ -352,5 +352,130 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+         <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 2014</td>
+                        <td class="py-2 px-4 border-b">Initial access: Attackers gain unauthorized access to Starwood’s reservation database.</td>
+                        <td class="py-2 px-4 border-b">Suspected Chinese state-sponsored hackers</td>
+                        <td class="py-2 px-4 border-b">Likely exploited weak credentials or outdated systems; undetected for years.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 2015</td>
+                        <td class="py-2 px-4 border-b">Starwood breach reported: Separate 2014 credit card breach at 50+ properties; Marriott announces acquisition.</td>
+                        <td class="py-2 px-4 border-b">Starwood/Marriott</td>
+                        <td class="py-2 px-4 border-b">40,000 payment cards affected; acquisition proceeds without full IT audit.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 2016</td>
+                        <td class="py-2 px-4 border-b">Marriott acquires Starwood: Inherits vulnerable IT infrastructure, no integration to Marriott’s systems.</td>
+                        <td class="py-2 px-4 border-b">Marriott</td>
+                        <td class="py-2 px-4 border-b">Starwood systems remain unpatched, no MFA or robust monitoring.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 8, 2018</td>
+                        <td class="py-2 px-4 border-b">Detection: Accenture’s security tool (IBM Guardium) flags suspicious database query.</td>
+                        <td class="py-2 px-4 border-b">Accenture/Marriott</td>
+                        <td class="py-2 px-4 border-b">Query by admin account not tied to user; Remote Access Trojan (RAT) and MimiKatz found.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 2018</td>
+                        <td class="py-2 px-4 border-b">Investigation: Marriott confirms breach, decrypts stolen data, identifies 383 million records affected.</td>
+                        <td class="py-2 px-4 border-b">Marriott/Forensic teams</td>
+                        <td class="py-2 px-4 border-b">5.25 million unencrypted passport numbers, 8.6 million card details; data exfiltrated since 2014.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 30, 2018</td>
+                        <td class="py-2 px-4 border-b">Disclosure: Marriott announces breach to public, notifies law enforcement.</td>
+                        <td class="py-2 px-4 border-b">Marriott</td>
+                        <td class="py-2 px-4 border-b">Stock drops 5%; public trust eroded.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 2019</td>
+                        <td class="py-2 px-4 border-b">ICO penalty notice: Proposes £99 million fine for GDPR violations.</td>
+                        <td class="py-2 px-4 border-b">UK ICO</td>
+                        <td class="py-2 px-4 border-b">Cites failure to secure data, inadequate M&A due diligence.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 30, 2020</td>
+                        <td class="py-2 px-4 border-b">Fine reduced: ICO finalizes £18.4 million fine, acknowledging Marriott’s cooperation.</td>
+                        <td class="py-2 px-4 border-b">UK ICO</td>
+                        <td class="py-2 px-4 border-b">Reduced from £99 million due to mitigation efforts.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 9, 2024</td>
+                        <td class="py-2 px-4 border-b">Settlement: Marriott agrees to $52 million penalty with 49 U.S. states and FTC.</td>
+                        <td class="py-2 px-4 border-b">Marriott/FTC/States</td>
+                        <td class="py-2 px-4 border-b">Requires data minimization, MFA, third-party audits for 20 years.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 4 years (July 2014 to September 2018), from initial access to detection, due to inherited vulnerabilities and lack of monitoring.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Jul 2014)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Spread (2014–2018)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Sep 8, 2018)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Sep 2018–2024)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Compromised Starwood database via weak credentials. <br><strong>What went wrong</strong>: No MFA, outdated systems.</td>
+                        <td class="py-2 px-4 border-b">Data exfiltrated, re-encrypted to evade detection. <br><strong>Factor</strong>: No SIEM, no file integrity monitoring.</td>
+                        <td class="py-2 px-4 border-b">IBM Guardium flags query; RAT, MimiKatz found. <br><strong>Factor</strong>: External tool detection; no internal IDS.</td>
+                        <td class="py-2 px-4 border-b">Notified customers, settled lawsuits, enhanced security. <br><strong>Total time</strong>: $1B+ in losses, $52M penalties.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was exceptionally long (4 years vs. 2018 median ~78 days) due to unintegrated legacy systems, no MFA, and inadequate monitoring. Detection relied on an external tool (Accenture’s Guardium), exposing Marriott’s reactive security posture. Rapid containment post-detection mitigated further exfiltration.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Weak Starwood credentials. Why weak? No MFA. Why no MFA? Legacy systems. Why legacy? No M&A due diligence. Why no diligence? Cost focus. <br> <strong>Other causes</strong>: No SIEM, outdated encryption. <br> <strong>Beginners</strong>: Root causes trace to old systems, poor M&A. <br> <strong>Experts</strong>: Fishbone factors: Process (no IT audit), Technology (no MFA), M&A (Starwood).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 383 million records, 5.25 million passports, 8.6 million cards. <br> <strong>Financial</strong>: $1B+ losses, $52M penalties, $18.4M fine. <br> <strong>Reputational</strong>: Trust erosion, lawsuits. <br> <strong>Beginners</strong>: Impacts hit finances, reputation. <br> <strong>Experts</strong>: BIA metrics: RPO years, RTO months for recovery.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: RAT via SIEM; data exfiltration via IDS. <br> <strong>Opportunities</strong>: MFA, file integrity monitoring, M&A audits. <br> <strong>Failures</strong>: No IDS, no internal detection. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: database | selection: query: suspicious AND tool: mimikatz</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Contained breach, notified customers. <br> <strong>Long-term</strong>: Added MFA, SIEM, retired Starwood systems; settled lawsuits. <br> <strong>Beginners</strong>: Response restores trust. <br> <strong>Experts</strong>: NIST IR followed: Identification (Sep 8), Containment (Sep–Nov), Eradication (Nov–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: Chinese state-sponsored hackers. <br> <strong>TTPs</strong>: RAT, MimiKatz align with APT10. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include C2 IPs, RAT signatures.</td>
+                        <td class="py-2 px-4 border-b">Implement MFA. <br> Deploy SIEM, DLP. <br> Audit M&A IT systems. <br> Retire legacy systems. <br> <strong>Beginners</strong>: Secure logins, update systems. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, zero-trust architecture.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
 </body>
 </html>
