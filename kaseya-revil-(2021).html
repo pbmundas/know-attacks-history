@@ -292,5 +292,136 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Pre-July 2, 2021</td>
+                        <td class="py-2 px-4 border-b">Preparation: REvil affiliates exploit zero-day vulnerabilities (CVE-2021-30116) in Kaseya VSA software.</td>
+                        <td class="py-2 px-4 border-b">REvil (Sodinokibi) ransomware group</td>
+                        <td class="py-2 px-4 border-b">SQL injection and authentication bypass allow remote code execution; targeted MSPs.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 2, 2021</td>
+                        <td class="py-2 px-4 border-b">Initial infection: Malicious VSA update deployed to ~1,500 MSPs and 60,000 endpoints.</td>
+                        <td class="py-2 px-4 border-b">REvil affiliates</td>
+                        <td class="py-2 px-4 border-b">PowerShell script disables Defender, deploys ransomware; encrypts files with .encrypted extension.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 2, 2021</td>
+                        <td class="py-2 px-4 border-b">Detection: Kaseya incident response team identifies security incident, shuts down VSA servers.</td>
+                        <td class="py-2 px-4 border-b">Kaseya</td>
+                        <td class="py-2 px-4 border-b">Recommends on-premises VSA shutdown; affects 800–1,500 businesses in 17 countries.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 3, 2021</td>
+                        <td class="py-2 px-4 border-b">REvil claims responsibility: Demands $70M for universal decryptor on dark web forum.</td>
+                        <td class="py-2 px-4 border-b">REvil</td>
+                        <td class="py-2 px-4 border-b">Threatens to leak stolen data; largest RaaS ransom demand to date.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 4, 2021</td>
+                        <td class="py-2 px-4 border-b">Kaseya confirms zero-day: Details CVE-2021-30116 (SQL injection, auth bypass) in VSA.</td>
+                        <td class="py-2 px-4 border-b">Kaseya</td>
+                        <td class="py-2 px-4 border-b">Advisory released; patches developed; MSPs urged to isolate systems.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 5–20, 2021</td>
+                        <td class="py-2 px-4 border-b">Recovery efforts: Kaseya works with victims; REvil site goes offline (July 13).</td>
+                        <td class="py-2 px-4 border-b">Kaseya/REvil</td>
+                        <td class="py-2 px-4 border-b">Site outage suspected due to internal conflict or law enforcement; no decryptor provided.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 21, 2021</td>
+                        <td class="py-2 px-4 border-b">Decryptor obtained: Kaseya secures decryption tool from trusted third party.</td>
+                        <td class="py-2 px-4 border-b">Kaseya</td>
+                        <td class="py-2 px-4 border-b">Tool distributed to victims; recovery begins for ~800–1,500 businesses.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July–August 2021</td>
+                        <td class="py-2 px-4 border-b">Investigation: FBI, CISA attribute to REvil; lawsuits filed against Kaseya.</td>
+                        <td class="py-2 px-4 border-b">FBI/CISA</td>
+                        <td class="py-2 px-4 border-b">Class-action suits for negligence; REvil affiliates arrested in Romania (July 27).</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 2021</td>
+                        <td class="py-2 px-4 border-b">Legal fallout: Kaseya faces multiple lawsuits for supply-chain vulnerability.</td>
+                        <td class="py-2 px-4 border-b">Kaseya</td>
+                        <td class="py-2 px-4 border-b">Settlements ongoing; highlights RaaS risks.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">2022–2023</td>
+                        <td class="py-2 px-4 border-b">REvil shutdown: U.S. disrupts REvil infrastructure; affiliates arrested.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Operation Cronos; reduces RaaS threat but not eliminated.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 1 day (July 2, 2021), from initial infection to detection, due to rapid ransomware deployment but swift containment.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Pre-Jul 2)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Malware Deployment (Jul 2)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Jul 2)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Jul 21+)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Zero-day in VSA exploited. <br><strong>What went wrong</strong>: Unpatched software, no supply-chain checks.</td>
+                        <td class="py-2 px-4 border-b">Ransomware encrypts files, demands $70M. <br><strong>Factor</strong>: No EDR, no anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Kaseya detects incident, shuts down servers. <br><strong>Factor</strong>: Rapid response, no initial SIEM.</td>
+                        <td class="py-2 px-4 border-b">Decryptor distributed; lawsuits filed. <br><strong>Total time</strong>: 800–1,500 businesses disrupted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time (~24 hours vs. 2021 median ~21 days) was ultra-short due to ransomware’s immediate disruption, but preparation (zero-day) took months. No MFA and unpatched VSA enabled access; swift shutdown limited spread.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Zero-day in VSA. Why zero-day? Unpatched software. Why unpatched? Slow patch management. Why slow? Operational priorities. Why prioritized? Cost focus. <br> <strong>Other causes</strong>: No EDR, no supply-chain audits. <br> <strong>Beginners</strong>: Root causes trace to unpatched software. <br> <strong>Experts</strong>: Fishbone factors: Process (patch delays), Technology (no EDR), Supply Chain (VSA).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 100GB stolen; billing systems encrypted. <br> <strong>Financial</strong>: $70M demand, millions in recovery. <br> <strong>Operational</strong>: 1,500 MSPs, 60,000 endpoints disrupted. <br> <strong>Beginners</strong>: Impacts hit operations, finances. <br> <strong>Experts</strong>: BIA metrics: RTO weeks for some victims.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: VSA anomalies via SIEM; ransomware via EDR. <br> <strong>Opportunities</strong>: Patch management, supply-chain audits, EDR. <br> <strong>Failures</strong>: No monitoring, unpatched zero-day. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: vsa | selection: update: malicious AND exploit: zero_day</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Shut down servers, isolated systems. <br> <strong>Long-term</strong>: Patched VSA, added EDR, decryptor distributed. <br> <strong>Beginners</strong>: Response restores systems. <br> <strong>Experts</strong>: NIST IR followed: Identification (Jul 2), Containment (Jul 2), Eradication (Jul 21).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: REvil (Russian-speaking RaaS). <br> <strong>TTPs</strong>: Zero-day, ransomware align with RaaS. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include VSA hashes, C2 IPs.</td>
+                        <td class="py-2 px-4 border-b">Patch zero-days promptly. <br> Audit supply chain. <br> Deploy EDR, SIEM, DLP. <br> Prioritize cybersecurity. <br> <strong>Beginners</strong>: Update software, secure vendors. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, supply-chain security.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
