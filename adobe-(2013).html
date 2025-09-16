@@ -347,5 +347,125 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <!-- Attack Timeline -->
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Mid-August 2013</td>
+                        <td class="py-2 px-4 border-b">Initial breach: Attackers exploit vulnerabilities in Adobe’s network, likely outdated ColdFusion servers.</td>
+                        <td class="py-2 px-4 border-b">Cybercriminals (suspected, financially motivated)</td>
+                        <td class="py-2 px-4 border-b">Gained access to customer data and source code repositories.</td>[](https://www.darkreading.com/cyberattacks-data-breaches/hacking-the-adobe-breach)[](https://krebsonsecurity.com/2013/10/adobe-to-announce-source-code-customer-data-breach/)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August-September 2013</td>
+                        <td class="py-2 px-4 border-b">Data collection and exfiltration: Stolen 2.9 million (later 38 million) user records and source code.</td>
+                        <td class="py-2 px-4 border-b">Attackers</td>
+                        <td class="py-2 px-4 border-b">Included names, encrypted passwords, credit card details, emails, and source code for Acrobat, ColdFusion, Photoshop.</td>[](https://medium.com/%40maazptl24/the-adobe-attack-of-2013-a-cautionary-tale-of-cybersecurity-failure-1ef4ec74eb64)[](https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 17, 2013</td>
+                        <td class="py-2 px-4 border-b">Adobe detects breach after server capacity alert reveals decryption attempts.</td>
+                        <td class="py-2 px-4 border-b">Adobe</td>
+                        <td class="py-2 px-4 border-b">Unauthorized access to payment card data detected; investigation begins.</td>[](https://krebsonsecurity.com/2016/11/adobe-fined-1m-in-multistate-suit-over-2013-breach-no-jail-for-spamhaus-attacker/)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Late September 2013</td>
+                        <td class="py-2 px-4 border-b">Source code discovered on hacker’s server by KrebsOnSecurity and Hold Security.</td>
+                        <td class="py-2 px-4 border-b">Brian Krebs, Alex Holden</td>
+                        <td class="py-2 px-4 border-b">40GB of Adobe source code found, indicating broader compromise.</td>[](https://www.darkreading.com/cyberattacks-data-breaches/hacking-the-adobe-breach)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 3, 2013</td>
+                        <td class="py-2 px-4 border-b">Adobe publicly announces breach, confirming 2.9 million accounts affected.</td>
+                        <td class="py-2 px-4 border-b">Adobe</td>
+                        <td class="py-2 px-4 border-b">Password resets initiated; banks and customers notified.</td>[](https://prezi.com/p/7iuiwqguiicm/adobe-2013-data-breach-timeline/)[](https://www.nytimes.com/2013/10/04/technology/adobe-announces-security-breach.html)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 29, 2013</td>
+                        <td class="py-2 px-4 border-b">Breach scope expanded: 38 million active accounts confirmed compromised.</td>
+                        <td class="py-2 px-4 border-b">Adobe</td>
+                        <td class="py-2 px-4 border-b">Additional inactive/test accounts affected; total ~153 million records.</td>[](https://www.twingate.com/blog/tips/adobe-data-breach)[](https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 2013</td>
+                        <td class="py-2 px-4 border-b">Fallout: Stolen data used for phishing and password reuse attacks; source code risks persist.</td>
+                        <td class="py-2 px-4 border-b">Cybercriminals</td>
+                        <td class="py-2 px-4 border-b">Impacted users of other platforms (e.g., Facebook, Diapers.com) due to password reuse.</td>[](https://blog.cygilant.com/blog/bid/326184/Facts-About-the-Adobe-Data-Breach)
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 7, 2016</td>
+                        <td class="py-2 px-4 border-b">Legal resolution: Adobe settles with 15 state attorneys general for $1 million.</td>
+                        <td class="py-2 px-4 border-b">Adobe</td>
+                        <td class="py-2 px-4 border-b">Implemented new security policies; reputational damage persists.</td>[](https://www.hunton.com/privacy-and-information-security-law/adobe-settles-multistate-data-breach-enforcement-action)
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 30-45 days (mid-August to September 17, 2013), the period attackers operated undetected in Adobe’s network, allowing data and source code exfiltration.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Mid-August)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection (August-September)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Exfiltration (August-September)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Detection (September 17)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Exploited vulnerabilities, likely in outdated ColdFusion servers. <br><strong>What went wrong</strong>: Unpatched software, weak network segmentation.</td>[](https://krebsonsecurity.com/2013/10/adobe-to-announce-source-code-customer-data-breach/)
+                        <td class="py-2 px-4 border-b">Queried databases for user data; accessed source code repositories. <br><strong>Factor</strong>: No anomaly detection for mass data access.</td>[](https://medium.com/%40maazptl24/the-adobe-attack-of-2013-a-cautionary-tale-of-cybersecurity-failure-1ef4ec74eb64)
+                        <td class="py-2 px-4 border-b">Exfiltrated 38 million records and 40GB source code. <br><strong>Factor</strong>: No egress filtering or DLP for large data transfers.</td>[](https://www.darkreading.com/cyberattacks-data-breaches/hacking-the-adobe-breach)
+                        <td class="py-2 px-4 border-b">Server capacity alert flagged decryption attempts. <br><strong>Total time</strong>: Enabled massive data and IP theft.</td>[](https://krebsonsecurity.com/2016/11/adobe-fined-1m-in-multistate-suit-over-2013-breach-no-jail-for-spamhaus-attacker/)
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a silent raid on a vault, unnoticed due to inadequate monitoring. Experts: Median dwell time in 2013 was ~150 days (per Mandiant); Adobe’s 30-45 days was relatively short but impactful due to poor encryption and source code loss.</p>[](https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/)
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Vulnerable servers. Why vulnerable? Outdated software (e.g., ColdFusion). Why outdated? No patch management. Why no patching? Siloed IT/security teams. Why siloed? Prioritized product over security. <br> <strong>Other causes</strong>: Weak encryption (no salting), no DLP, inadequate network monitoring. <br> <strong>Beginners</strong>: Root causes trace security gaps. <br> <strong>Experts</strong>: Fishbone factors: Technology (outdated software), Process (no DLP), People (security culture).</td>[](https://medium.com/%40maazptl24/the-adobe-attack-of-2013-a-cautionary-tale-of-cybersecurity-failure-1ef4ec74eb64)[](https://www.linkedin.com/pulse/adobe-cyberattack-2013-case-study-bulitha-kawushika-hlrxc)
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 38 million active accounts, ~153 million total, 40GB source code. <br> <strong>Financial</strong>: $1M settlement, millions in remediation. <br> <strong>Reputational</strong>: Trust erosion; impacted Adobe’s cloud transition. <br> <strong>Follow-on</strong>: Password reuse attacks, potential zero-day exploits. <br> <strong>Beginners</strong>: Impacts hit users and brand. <br> <strong>Experts</strong>: BIA metrics: RPO violated due to source code loss.</td>[](https://medium.com/%40maazptl24/the-adobe-attack-of-2013-a-cautionary-tale-of-cybersecurity-failure-1ef4ec74eb64)[](https://www.hunton.com/privacy-and-information-security-law/adobe-settles-multistate-data-breach-enforcement-action)
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Large data queries could have been caught with SIEM; exfiltration with DLP; server issues with monitoring. <br> <strong>Opportunities</strong>: Deploy SIEM for query spikes, DLP for egress, patch management for servers. <br> <strong>Failures</strong>: No encryption audits, short log retention. <br> <strong>Beginners</strong>: Detection is like a watchdog. <br> <strong>Experts</strong>: Sigma rule example: <code>detection: logsource: category: network | selection: DataVolume > 1GB AND Destination: external</code>.</td>[](https://www.edrawmind.com/mind-maps/37322/adobes-cyber-attack-history)
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Password resets, credit monitoring, notified banks. <br> <strong>Long-term</strong>: Adopted salted hashing, integrated security teams, implemented DLP. <br> <strong>Beginners</strong>: Response is damage control. <br> <strong>Experts</strong>: Followed NIST IR: Identification (September), Containment (October), Eradication (post-2013).</td>[](https://www.slideshare.net/slideshow/adobe-security-breach-30650671/30650671)[](https://www.hunton.com/privacy-and-information-security-law/adobe-settles-multistate-data-breach-enforcement-action)
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: Financially motivated cybercriminals. <br> <strong>TTPs</strong>: Server exploitation, data/source code theft align with cybercrime groups. <br> <strong>Beginners</strong>: Attribution is identifying culprits. <br> <strong>Experts</strong>: TTPs suggest Eastern European or Russian actors; limited IOCs due to encrypted data.</td>[](https://www.darkreading.com/cyberattacks-data-breaches/hacking-the-adobe-breach)
+                        <td class="py-2 px-4 border-b">Patch servers promptly. <br> Use strong, salted hashing. <br> Deploy DLP and SIEM. <br> Segment networks. <br> Foster security culture. <br> <strong>Beginners</strong>: Secure data and code. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for enterprise defense.</td>[](https://www.csoonline.com/article/565054/adobe-s-cso-talks-security-the-2013-breach-and-how-he-sets-priorities.html)[](https://www.edrawmind.com/mind-maps/37322/adobes-cyber-attack-history)
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
