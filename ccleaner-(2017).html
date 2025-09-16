@@ -328,5 +328,156 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 11, 2017, 5 AM</td>
+                        <td class="py-2 px-4 border-b">Initial access: Attackers access Piriform developer workstation via stolen TeamViewer credentials.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group (Chinese state-sponsored)</td>
+                        <td class="py-2 px-4 border-b">Credentials likely from prior breaches; VBScript malware installed on third attempt.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 12, 2017, 4 AM</td>
+                        <td class="py-2 px-4 border-b">Lateral movement: Attackers access second computer via RDP, install backdoor.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">Older second-stage malware dropped in registry; no admin rights initially.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 14, 2017</td>
+                        <td class="py-2 px-4 border-b">Malware escalation: First computer infected with older second-stage malware.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">Strengthened foothold in Piriform network.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 4, 2017</td>
+                        <td class="py-2 px-4 border-b">Malware compilation: Custom ShadowPad backdoor compiled for third-stage attack.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">Designed for data theft, remote control; targeted espionage.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 12, 2017</td>
+                        <td class="py-2 px-4 border-b">ShadowPad deployment: Installed on four Piriform computers, including build server, as mscoree.dll.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">Keylogger logs encrypted; not deployed to CCleaner users.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Mid-April–July 2017</td>
+                        <td class="py-2 px-4 border-b">Network infiltration: Attackers install keylogger, steal admin credentials via RDP.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">Prepared malicious CCleaner build; undetected due to no monitoring.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 18, 2017</td>
+                        <td class="py-2 px-4 border-b">Acquisition: Avast acquires Piriform, unaware of ongoing breach.</td>
+                        <td class="py-2 px-4 border-b">Avast</td>
+                        <td class="py-2 px-4 border-b">Exposed to inherited supply-chain attack.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 2, 2017</td>
+                        <td class="py-2 px-4 border-b">Malicious distribution: CCleaner 5.33.6162 and CCleaner Cloud 1.07.3191 replaced with backdoored versions.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">2.27M users downloaded; valid Symantec certificate used.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 15–September 12, 2017</td>
+                        <td class="py-2 px-4 border-b">Malware execution: Infected CCleaner collects data, phones home to C2 server.</td>
+                        <td class="py-2 px-4 border-b">Axiom Group</td>
+                        <td class="py-2 px-4 border-b">1.65M systems contacted C2; 40 targeted with ShadowPad.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 12, 2017</td>
+                        <td class="py-2 px-4 border-b">Detection: Morphisec identifies malicious CCleaner.exe at customer sites.</td>
+                        <td class="py-2 px-4 border-b">Morphisec</td>
+                        <td class="py-2 px-4 border-b">Shared logs with Avast; reflective DLL loading detected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 13, 2017</td>
+                        <td class="py-2 px-4 border-b">Confirmation and mitigation: Cisco Talos confirms breach, notifies Avast; C2 server shut down with FBI.</td>
+                        <td class="py-2 px-4 border-b">Cisco Talos/Avast</td>
+                        <td class="py-2 px-4 border-b">Stopped further damage; 72-hour response.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 18, 2017</td>
+                        <td class="py-2 px-4 border-b">Public disclosure: Avast announces breach, urges users to update to CCleaner 5.34.</td>
+                        <td class="py-2 px-4 border-b">Avast</td>
+                        <td class="py-2 px-4 border-b">No evidence of user harm; new build environment created.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 2018</td>
+                        <td class="py-2 px-4 border-b">Investigation update: Avast confirms ShadowPad on Piriform servers, not user PCs.</td>
+                        <td class="py-2 px-4 border-b">Avast</td>
+                        <td class="py-2 px-4 border-b">Linked to Axiom; keylogger logs decrypted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 6 months (March 11, 2017–September 13, 2017), allowing attackers to compromise Piriform’s network, prepare malicious builds, and distribute malware undetected.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Mar 11, 2017)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Lateral Movement (Mar–Apr 2017)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Collection/Exfiltration (Apr–Jul 2017)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Malware Deployment (Aug 2–Sep 12, 2017)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection (Sep 13, 2017)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Stolen TeamViewer credentials. <br><strong>What went wrong</strong>: No MFA, reused credentials.</td>
+                        <td class="py-2 px-4 border-b">Accessed second computer via RDP, installed backdoor. <br><strong>Factor</strong>: No network segmentation, no IDS.</td>
+                        <td class="py-2 px-4 border-b">Stole admin credentials via keylogger; prepared ShadowPad. <br><strong>Factor</strong>: No DLP or anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Distributed malicious CCleaner to 2.27M users. <br><strong>Factor</strong>: No build integrity checks.</td>
+                        <td class="py-2 px-4 border-b">Detected by Morphisec and Cisco Talos; C2 shut down. <br><strong>Total time</strong>: Enabled espionage targeting 40 tech firms.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a saboteur tampering with a factory’s production line for months, unnoticed due to lax security. Industry reports suggest median dwell times in 2017 were ~100 days; CCleaner’s 6 months was prolonged, enabling a targeted supply-chain attack.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Stolen TeamViewer credentials. Why stolen? Reused from prior breaches. Why reused? No MFA or credential policies. Why no policies? Weak security culture. Why weak? Pre-acquisition neglect. <br> <strong>Other causes</strong>: No DLP, no SIEM, weak build security. <br> <strong>Beginners</strong>: Root causes trace to poor access controls. <br> <strong>Experts</strong>: Fishbone factors: People (credential reuse), Process (no MFA), Technology (no IDS).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 2.27M users exposed; 40 tech firms targeted. <br> <strong>Financial</strong>: $20K recovery cost. <br> <strong>Reputational</strong>: Trust in CCleaner/Avast eroded. <br> <strong>Beginners</strong>: Impacts hit users, reputation. <br> <strong>Experts</strong>: BIA metrics: RPO violated due to data theft.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: TeamViewer access via logs; lateral movement via IDS; exfiltration via DLP. <br> <strong>Opportunities</strong>: Enforce MFA, SIEM, DLP; audit builds. <br> <strong>Failures</strong>: No monitoring, no integrity checks. <br> <strong>Beginners</strong>: Detection is like a software checksum. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: build | selection: file: unsigned OR hash: mismatched</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Shut down C2, released CCleaner 5.34. <br> <strong>Long-term</strong>: New build environment, MFA, monitoring. <br> <strong>Beginners</strong>: Response stops damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Sep 13), Containment (Sep 15), Eradication (post-Sep).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Axiom Group (Chinese state-sponsored). <br> <strong>TTPs</strong>: Supply-chain attack, ShadowPad align with APT17. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: TTPs match Axiom; IOCs include ShadowPad hashes, C2 IPs.</td>
+                        <td class="py-2 px-4 border-b">Enforce MFA, credential rotation. <br> Secure build pipelines. <br> Deploy SIEM, DLP, EDR. <br> Conduct cyber due diligence in acquisitions. <br> <strong>Beginners</strong>: Secure software, verify builds. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, software supply-chain security.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
