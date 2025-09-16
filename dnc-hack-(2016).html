@@ -258,5 +258,157 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+	<div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+	<h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 2015</td>
+                        <td class="py-2 px-4 border-b">Initial access (Cozy Bear): Spear-phishing email compromises DNC employee credentials.</td>
+                        <td class="py-2 px-4 border-b">Cozy Bear (APT29, FSB-linked)</td>
+                        <td class="py-2 px-4 border-b">Undetected; installed X-Agent malware for persistent access.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 2015</td>
+                        <td class="py-2 px-4 border-b">Initial access (Fancy Bear): Separate spear-phishing campaign targets DNC network.</td>
+                        <td class="py-2 px-4 border-b">Fancy Bear (APT28, GRU-linked)</td>
+                        <td class="py-2 px-4 border-b">Installed X-Agent; focused on email and document theft.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 2015–March 2016</td>
+                        <td class="py-2 px-4 border-b">Lateral movement and data collection: Both groups navigate network, steal emails and documents.</td>
+                        <td class="py-2 px-4 border-b">Cozy Bear, Fancy Bear</td>
+                        <td class="py-2 px-4 border-b">Exfiltrated 19,000+ emails; undetected due to weak monitoring.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 2016</td>
+                        <td class="py-2 px-4 border-b">Data staging: Attackers prepare stolen data for public release.</td>
+                        <td class="py-2 px-4 border-b">Fancy Bear</td>
+                        <td class="py-2 px-4 border-b">Organized emails for strategic leaks; no alerts triggered.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 2016</td>
+                        <td class="py-2 px-4 border-b">Detection attempt: DNC IT staff notice unusual activity, hire CrowdStrike.</td>
+                        <td class="py-2 px-4 border-b">DNC/CrowdStrike</td>
+                        <td class="py-2 px-4 border-b">Confirmed two separate intrusions; Cozy Bear and Fancy Bear identified.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 12, 2016</td>
+                        <td class="py-2 px-4 border-b">Data leak begins: Guccifer 2.0, a Fancy Bear persona, posts stolen DNC documents on WordPress.</td>
+                        <td class="py-2 px-4 border-b">Fancy Bear</td>
+                        <td class="py-2 px-4 border-b">Released opposition research on Trump; claimed to be lone hacker.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 14, 2016</td>
+                        <td class="py-2 px-4 border-b">DNC confirms breach: CrowdStrike publicly attributes attack to Russian groups.</td>
+                        <td class="py-2 px-4 border-b">DNC/CrowdStrike</td>
+                        <td class="py-2 px-4 border-b">Named Cozy Bear and Fancy Bear; linked to Russian government.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 22, 2016</td>
+                        <td class="py-2 px-4 border-b">Major leak: WikiLeaks publishes 19,252 DNC emails and 8,034 attachments.</td>
+                        <td class="py-2 px-4 border-b">Fancy Bear via WikiLeaks</td>
+                        <td class="py-2 px-4 border-b">Exposed DNC bias against Sanders; fueled political controversy.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 25, 2016</td>
+                        <td class="py-2 px-4 border-b">Fallout: DNC chair Debbie Wasserman Schultz resigns.</td>
+                        <td class="py-2 px-4 border-b">DNC</td>
+                        <td class="py-2 px-4 border-b">Resignation due to public backlash over email revelations.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July–October 2016</td>
+                        <td class="py-2 px-4 border-b">Further leaks: Additional DNC and Podesta emails released via WikiLeaks.</td>
+                        <td class="py-2 px-4 border-b">Fancy Bear</td>
+                        <td class="py-2 px-4 border-b">Targeted Clinton campaign chair John Podesta; amplified election interference.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 7, 2016</td>
+                        <td class="py-2 px-4 border-b">U.S. government statement: DHS and ODNI attribute hacks to Russia.</td>
+                        <td class="py-2 px-4 border-b">U.S. Government</td>
+                        <td class="py-2 px-4 border-b">Confirmed intent to influence U.S. election.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 29, 2016</td>
+                        <td class="py-2 px-4 border-b">U.S. response: Obama administration imposes sanctions on Russia, expels 35 diplomats.</td>
+                        <td class="py-2 px-4 border-b">U.S. Government</td>
+                        <td class="py-2 px-4 border-b">Targeted GRU, FSB; released IOCs via GRIZZLY STEPPE report.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 13, 2018</td>
+                        <td class="py-2 px-4 border-b">Indictments: Mueller investigation charges 12 GRU officers for DNC hack.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Linked to Fancy Bear; detailed spear-phishing and leak tactics.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 10 months for Cozy Bear (June 2015–April 2016) and 7 months for Fancy Bear (September 2015–April 2016), allowing extensive data theft and preparation for leaks.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Jun/Sep 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Lateral Movement (Sep 2015–Mar 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Collection/Exfiltration (Sep 2015–Mar 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Data Leakage (Jun–Jul 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection (Apr 2016)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spear-phishing compromised credentials. <br><strong>What went wrong</strong>: No 2FA, weak email filters.</td>
+                        <td class="py-2 px-4 border-b">Navigated network, accessed email servers. <br><strong>Factor</strong>: No segmentation, no IDS.</td>
+                        <td class="py-2 px-4 border-b">Stole 19,000+ emails, documents. <br><strong>Factor</strong>: No DLP or anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Leaked data via Guccifer 2.0, WikiLeaks. <br><strong>Factor</strong>: No exfiltration monitoring.</td>
+                        <td class="py-2 px-4 border-b">Detected via unusual activity; CrowdStrike engaged. <br><strong>Total time</strong>: Enabled election interference.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like spies infiltrating a campaign headquarters for months, unnoticed due to poor defenses. Industry reports suggest median dwell times in 2016 were ~150 days; the DNC’s 7–10 months was prolonged, enabling significant data theft and strategic leaks.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Phishing compromised credentials. Why successful? No 2FA, weak training. Why weak? Underfunded cybersecurity. Why underfunded? Political organization priorities. Why prioritized? Budget focus on campaigns. <br> <strong>Other causes</strong>: No DLP, no SIEM, outdated systems. <br> <strong>Beginners</strong>: Root causes trace to lax security. <br> <strong>Experts</strong>: Fishbone factors: People (untrained staff), Process (no 2FA), Technology (no IDS).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 19,000+ emails, documents stolen. <br> <strong>Reputational</strong>: DNC trust eroded; Schultz resigned. <br> <strong>Political</strong>: Fueled election controversy, Sanders-Clinton rift. <br> <strong>Beginners</strong>: Impacts hit reputation, politics. <br> <strong>Experts</strong>: BIA metrics: RPO violated due to data exposure.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Phishing via email filters; lateral movement via IDS; exfiltration via DLP. <br> <strong>Opportunities</strong>: Deploy 2FA, SIEM, DLP; train staff. <br> <strong>Failures</strong>: No monitoring, ignored alerts. <br> <strong>Beginners</strong>: Detection is like a security camera. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: email | selection: attachment: malicious OR sender: unknown</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Engaged CrowdStrike, took systems offline. <br> <strong>Long-term</strong>: Improved 2FA, monitoring; hired cybersecurity staff. <br> <strong>Beginners</strong>: Response limits damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Apr 2016), Containment (Apr 2016), Eradication (post-Apr).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Fancy Bear (GRU), Cozy Bear (FSB), indicted 2018. <br> <strong>TTPs</strong>: Phishing, X-Agent malware, leaks align with state-sponsored actors. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: TTPs match APT28/APT29; IOCs include X-Agent hashes, Russian IPs.</td>
+                        <td class="py-2 px-4 border-b">Enforce 2FA, email filtering. <br> Segment networks. <br> Deploy SIEM, DLP, EDR. <br> Train staff on phishing. <br> Fund cybersecurity. <br> <strong>Beginners</strong>: Secure systems, educate employees. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
+
