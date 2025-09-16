@@ -382,5 +382,145 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <!-- Attack Timeline -->
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spring 2015</td>
+                        <td class="py-2 px-4 border-b">Initial access: Spear-phishing emails with BlackEnergy 3 malware infect corporate networks.</td>
+                        <td class="py-2 px-4 border-b">Sandworm (Russian GRU, Unit 74455)</td>
+                        <td class="py-2 px-4 border-b">Excel attachment opened by employee at Prykarpattyaoblenergo; malware installed backdoor.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spring–Summer 2015</td>
+                        <td class="py-2 px-4 border-b">Lateral movement and reconnaissance: Attackers map IT and OT networks, collect data.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">Scanned networks, identified SCADA systems; undetected due to lack of monitoring.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Unknown (pre-Dec 2015)</td>
+                        <td class="py-2 px-4 border-b">Malware staging: Attackers install KillDisk and other malicious tools.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">Positioned malware for system wiping, firmware corruption.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 23, 2015, ~3:30 PM</td>
+                        <td class="py-2 px-4 border-b">Attack execution: Attackers remotely access SCADA systems, open circuit breakers at 30 substations.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">225,000–230,000 customers lose power; primarily in Ivano-Frankivsk (Prykarpattyaoblenergo).</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 23, 2015</td>
+                        <td class="py-2 px-4 border-b">KillDisk deployment: Malware wipes systems, corrupts master boot records.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">Rendered systems inoperable; delayed recovery efforts.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 23, 2015</td>
+                        <td class="py-2 px-4 border-b">Firmware corruption: Serial-to-Ethernet devices overwritten with malicious code.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">Devices rendered unrecoverable; disrupted remote control.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 23, 2015</td>
+                        <td class="py-2 px-4 border-b">UPS sabotage: Attackers schedule disconnects for uninterruptible power supplies.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">Control centers lose power, complicating response.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 23, 2015</td>
+                        <td class="py-2 px-4 border-b">Denial-of-service attack: Call centers flooded, blocking customer reports.</td>
+                        <td class="py-2 px-4 border-b">Sandworm</td>
+                        <td class="py-2 px-4 border-b">Prevented outage reporting; increased public confusion.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 23–24, 2015</td>
+                        <td class="py-2 px-4 border-b">Power restoration: Operators use manual controls to restore power within 1–6 hours.</td>
+                        <td class="py-2 px-4 border-b">Ukrainian utilities</td>
+                        <td class="py-2 px-4 border-b">Manual failover mitigated outage; systems remained constrained.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">January–February 2016</td>
+                        <td class="py-2 px-4 border-b">Investigation: U.S. agencies (FBI, DHS) and Ukrainian firms analyze attack.</td>
+                        <td class="py-2 px-4 border-b">U.S./Ukrainian teams</td>
+                        <td class="py-2 px-4 border-b">Confirmed BlackEnergy and KillDisk; attributed to Russia.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 2020</td>
+                        <td class="py-2 px-4 border-b">U.S. indicts six Sandworm members for this and other attacks.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Linked to Russian GRU; no arrests due to jurisdiction.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 6–9 months (from spring 2015 to detection on December 23, 2015), allowing attackers to infiltrate, map networks, and stage malware undetected.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Spring 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Lateral Movement (Spring–Summer 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Collection/Exfiltration (Spring–Summer 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Malware Deployment (Dec 23, 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection (Dec 23, 2015)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spear-phishing with BlackEnergy 3 via Excel attachment. <br><strong>What went wrong</strong>: No email filtering, weak user training.</td>
+                        <td class="py-2 px-4 border-b">Moved from IT to OT networks undetected. <br><strong>Factor</strong>: No network segmentation, no intrusion detection.</td>
+                        <td class="py-2 px-4 border-b">Collected SCADA data, network maps. <br><strong>Factor</strong>: No data loss prevention or anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Deployed KillDisk, corrupted firmware, opened breakers. <br><strong>Factor</strong>: No real-time monitoring of SCADA.</td>
+                        <td class="py-2 px-4 border-b">Detected after breakers opened, systems wiped. <br><strong>Total time</strong>: Enabled extensive preparation and disruption.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a saboteur covertly wiring explosives in a factory for months, unnoticed due to poor security. Industry reports suggest median dwell times in 2015 were ~150–200 days; the Ukrainian grid’s 6–9 months was prolonged, enabling a highly coordinated attack on critical infrastructure.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Phishing delivered BlackEnergy. Why successful? No email filters, weak training. Why weak? Underfunded cybersecurity. Why underfunded? Soviet-era infrastructure, budget constraints. Why constrained? War and corruption. <br> <strong>Other causes</strong>: No OT segmentation, no SIEM. <br> <strong>Beginners</strong>: Root causes trace to lax security. <br> <strong>Experts</strong>: Fishbone factors: People (untrained staff), Process (no filtering), Technology (no IDS).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: Network maps, SCADA data stolen. <br> <strong>Physical</strong>: 225,000–230,000 customers without power for 1–6 hours. <br> <strong>Operational</strong>: Systems wiped, control centers offline. <br> <strong>Reputational</strong>: Exposed grid vulnerabilities globally. <br> <strong>Beginners</strong>: Impacts hit customers, operations. <br> <strong>Experts</strong>: BIA metrics: RTO violated due to system downtime.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Phishing via email filters; lateral movement via IDS; exfiltration via DLP. <br> <strong>Opportunities</strong>: Deploy 2FA, SIEM, OT monitoring; train staff. <br> <strong>Failures</strong>: No segmentation, no real-time alerts. <br> <strong>Beginners</strong>: Detection is like a guard post. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: network | selection: traffic: unusual OR protocol: scada</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Manual restoration, engaged U.S. investigators. <br> <strong>Long-term</strong>: Hardened OT security, improved monitoring. <br> <strong>Beginners</strong>: Response restores services. <br> <strong>Experts</strong>: NIST IR followed: Identification (Dec 23), Containment (Dec 23–24), Eradication (post-Dec).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Sandworm (Russian GRU), indicted 2020. <br> <strong>TTPs</strong>: Phishing, BlackEnergy, KillDisk align with state-sponsored actors. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: TTPs match Sandworm; IOCs include malware hashes, Russian IPs.</td>
+                        <td class="py-2 px-4 border-b">Enforce 2FA, email filtering. <br> Segment IT/OT networks. <br> Deploy SIEM, DLP, EDR. <br> Train staff on phishing. <br> Fund critical infrastructure security. <br> <strong>Beginners</strong>: Secure systems, train employees. <br> <strong>Experts</strong>: Adopt ISA/IEC 62443, MITRE ATT&CK for OT defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
