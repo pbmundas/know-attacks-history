@@ -338,5 +338,130 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 27, 2017, Morning</td>
+                        <td class="py-2 px-4 border-b">Initial infection: NotPetya infiltrates Maersk via a compromised M.E.Doc update in Ukraine office (Odessa).</td>
+                        <td class="py-2 px-4 border-b">Russian state-sponsored (Sandworm)</td>
+                        <td class="py-2 px-4 border-b">Exploited EternalBlue and Mimikatz; spread via SMB protocol.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 27, 2017, Afternoon</td>
+                        <td class="py-2 px-4 border-b">Malware spread: Encrypts 45,000 PCs, 4,000 servers across 600 sites; wipes 147 domain controllers.</td>
+                        <td class="py-2 px-4 border-b">NotPetya</td>
+                        <td class="py-2 px-4 border-b">Operations halted at 76 ports, including Los Angeles, Rotterdam; 56,000 endpoints affected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 27, 2017, Evening</td>
+                        <td class="py-2 px-4 border-b">Containment: Maersk shuts down global IT systems to stop malware spread.</td>
+                        <td class="py-2 px-4 border-b">Maersk IT Team</td>
+                        <td class="py-2 px-4 border-b">Tracking, logistics offline; manual operations (paper, WhatsApp) used.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 28, 2017</td>
+                        <td class="py-2 px-4 border-b">Response: Maersk confirms Petya attack, works with IT partners and cybersecurity agencies.</td>
+                        <td class="py-2 px-4 border-b">Maersk</td>
+                        <td class="py-2 px-4 border-b">Public statement issued; no operational impact on Maersk Oil, Drilling, Tankers.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 29, 2017</td>
+                        <td class="py-2 px-4 border-b">Partial recovery: Maersk Line accepts bookings via INTTRA; some APM Terminals resume.</td>
+                        <td class="py-2 px-4 border-b">Maersk</td>
+                        <td class="py-2 px-4 border-b">80% of critical functionality restored via manual processes.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 4–9, 2017</td>
+                        <td class="py-2 px-4 border-b">Network rebuild: IT team uses Ghana domain controller backup to restore Active Directory.</td>
+                        <td class="py-2 px-4 border-b">Maersk IT Team</td>
+                        <td class="py-2 px-4 border-b">First-class flight for server; 10-day rebuild of IT infrastructure.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 9–15, 2017</td>
+                        <td class="py-2 px-4 border-b">Full recovery: Maersk Line, Damco, APM Terminals return to normal operations.</td>
+                        <td class="py-2 px-4 border-b">Maersk</td>
+                        <td class="py-2 px-4 border-b">Two-week disruption; $200–300M loss reported.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 16, 2017</td>
+                        <td class="py-2 px-4 border-b">Financial disclosure: Maersk reports $200–300M loss in Q2 earnings; no third-party data breach.</td>
+                        <td class="py-2 px-4 border-b">Maersk CEO Søren Skou</td>
+                        <td class="py-2 px-4 border-b">Reputational damage; cybersecurity overhaul announced.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Post-July 2017</td>
+                        <td class="py-2 px-4 border-b">Long-term measures: Maersk implements cyber insurance, rebuilds IT with enhanced security.</td>
+                        <td class="py-2 px-4 border-b">Maersk</td>
+                        <td class="py-2 px-4 border-b">Cybersecurity prioritized as competitive advantage.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately hours (June 27, 2017, morning to evening), as NotPetya spread rapidly but was contained same-day by system shutdowns.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Jun 27, AM)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Spread (Jun 27, AM–PM)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Jun 27, PM)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Jun 29–Jul 15)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">M.E.Doc update infects Odessa office. <br><strong>What went wrong</strong>: Unpatched Windows, no supply-chain checks.</td>
+                        <td class="py-2 px-4 border-b">Encrypts 45,000 PCs, 4,000 servers via EternalBlue. <br><strong>Factor</strong>: No network segmentation, no EDR.</td>
+                        <td class="py-2 px-4 border-b">Detected via black screens; systems shut down. <br><strong>Factor</strong>: Rapid response, no SIEM initially.</td>
+                        <td class="py-2 px-4 border-b">Rebuilt using Ghana backup; new IT systems. <br><strong>Total time</strong>: $200–300M loss, global supply chain impact.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a wildfire, spreading in hours due to unpatched systems. Industry reports note 2017 median dwell times were ~100 days; Maersk’s rapid spread and containment reflect NotPetya’s aggressive design, mitigated by swift action.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? M.E.Doc update. Why infected? Unpatched Windows. Why unpatched? Slow patch management. Why slow? Prioritized operations. Why prioritized? Cost focus. <br> <strong>Other causes</strong>: No EDR, no supply-chain checks. <br> <strong>Beginners</strong>: Root causes trace to unpatched systems. <br> <strong>Experts</strong>: Fishbone factors: Process (patch delays), Technology (no EDR), Supply Chain (M.E.Doc).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: No third-party data loss; 45,000 PCs, 4,000 servers encrypted. <br> <strong>Financial</strong>: $200–300M loss. <br> <strong>Reputational</strong>: Trust erosion in shipping. <br> <strong>Beginners</strong>: Impacts hit operations, finances. <br> <strong>Experts</strong>: BIA metrics: RTO delayed 2 weeks.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: M.E.Doc update via SIEM; spread via IDS; encryption via EDR. <br> <strong>Opportunities</strong>: Patch management, supply-chain audits, EDR. <br> <strong>Failures</strong>: No monitoring, unpatched systems. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: network | selection: protocol: smb AND exploit: eternalblue</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Shut down systems, used manual processes. <br> <strong>Long-term</strong>: Rebuilt IT, added cyber insurance, EDR. <br> <strong>Beginners</strong>: Response restores operations. <br> <strong>Experts</strong>: NIST IR followed: Identification (Jun 27), Containment (Jun 27), Eradication (Jul).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Russian state-sponsored (Sandworm). <br> <strong>TTPs</strong>: NotPetya, EternalBlue align with APT28. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include M.E.Doc update, C2 IPs.</td>
+                        <td class="py-2 px-4 border-b">Patch systems promptly. <br> Audit supply chain. <br> Deploy EDR, SIEM, DLP. <br> Prioritize cybersecurity. <br> <strong>Beginners</strong>: Update software, secure vendors. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, supply-chain security.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
