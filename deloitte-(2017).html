@@ -329,5 +329,124 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October/November 2016</td>
+                        <td class="py-2 px-4 border-b">Initial access: Hackers compromise an administrator account to access Deloitte’s global email server on Azure.</td>
+                        <td class="py-2 px-4 border-b">Unknown threat actor(s)</td>
+                        <td class="py-2 px-4 border-b">Account lacked 2FA; provided unrestricted access to email system.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 2016–March 2017</td>
+                        <td class="py-2 px-4 border-b">Data collection: Hackers access up to 5 million emails, including client data (usernames, passwords, IP addresses, health info).</td>
+                        <td class="py-2 px-4 border-b">Unknown threat actor(s)</td>
+                        <td class="py-2 px-4 border-b">Undetected due to lack of monitoring; data from 350 clients potentially exposed.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 13, 2016</td>
+                        <td class="py-2 px-4 border-b">Password reset notice: Deloitte mandates password changes for U.S. employees, possibly indicating breach suspicion.</td>
+                        <td class="py-2 px-4 border-b">Deloitte</td>
+                        <td class="py-2 px-4 border-b">Email sent to 244,000 staff; no public disclosure.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 2017</td>
+                        <td class="py-2 px-4 border-b">Detection: Deloitte identifies breach in email platform.</td>
+                        <td class="py-2 px-4 border-b">Deloitte</td>
+                        <td class="py-2 px-4 border-b">Internal investigation launched; codenamed “Windham.”</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 27, 2017</td>
+                        <td class="py-2 px-4 border-b">Legal response: Deloitte hires Hogan Lovells to review “possible cybersecurity incident.”</td>
+                        <td class="py-2 px-4 border-b">Deloitte/Hogan Lovells</td>
+                        <td class="py-2 px-4 border-b">Focused on tracing hacker activity; conducted from Rosslyn, Virginia office.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 25, 2017</td>
+                        <td class="py-2 px-4 border-b">Public disclosure: The Guardian reports breach, citing sources; Deloitte confirms “cyber incident.”</td>
+                        <td class="py-2 px-4 border-b">Deloitte/The Guardian</td>
+                        <td class="py-2 px-4 border-b">Deloitte claims only six clients “impacted”; notifies affected clients and regulators.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 10, 2017</td>
+                        <td class="py-2 px-4 border-b">Scope clarification: Sources reveal up to 350 clients’ data in compromised server, including U.S. government entities.</td>
+                        <td class="py-2 px-4 border-b">The Guardian</td>
+                        <td class="py-2 px-4 border-b">Contradicts Deloitte’s claim; includes sensitive attachments (security/design details).</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Post-September 2017</td>
+                        <td class="py-2 px-4 border-b">Ongoing investigation: Deloitte continues to analyze compromised data; no attribution confirmed.</td>
+                        <td class="py-2 px-4 border-b">Deloitte</td>
+                        <td class="py-2 px-4 border-b">Unable to identify lone wolf, rival, or state-sponsored actor; no reported disruption.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 5–6 months (October/November 2016–March 2017), allowing hackers to access and potentially exfiltrate sensitive client data undetected.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Oct/Nov 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Exfiltration (Oct 2016–Mar 2017)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection (Mar 2017)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Disclosure (Sep 2017)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Compromised admin account via single password. <br><strong>What went wrong</strong>: No 2FA, weak access controls.</td>
+                        <td class="py-2 px-4 border-b">Accessed 5M emails, client data. <br><strong>Factor</strong>: No DLP, no anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Identified via internal review; Hogan Lovells engaged. <br><strong>Factor</strong>: Delayed detection due to no SIEM.</td>
+                        <td class="py-2 px-4 border-b">Public disclosure after media report; minimized scope. <br><strong>Total time</strong>: Enabled extensive data exposure.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a thief roaming an office for months, unnoticed due to no security alarms. Industry reports suggest median dwell times in 2017 were ~100 days; Deloitte’s 5–6 months was prolonged, enabling significant data exposure due to inadequate monitoring.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Admin account compromised. Why compromised? No 2FA. Why no 2FA? Weak security policies. Why weak? Prioritized operations over security. Why prioritized? Cost-cutting focus. <br> <strong>Other causes</strong>: No DLP, no SIEM, unencrypted emails. <br> <strong>Beginners</strong>: Root causes trace to lax security. <br> <strong>Experts</strong>: Fishbone factors: People (untrained admins), Process (no 2FA), Technology (no IDS).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: ~5M emails, client data (usernames, passwords, IPs) exposed. <br> <strong>Reputational</strong>: Trust in Deloitte’s cybersecurity services eroded. <br> <strong>Beginners</strong>: Impacts hit client trust. <br> <strong>Experts</strong>: BIA metrics: RPO violated due to sensitive data exposure.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Admin access via logs; data access via DLP; exfiltration via IDS. <br> <strong>Opportunities</strong>: Deploy 2FA, SIEM, DLP; encrypt emails. <br> <strong>Failures</strong>: No monitoring, ignored alerts. <br> <strong>Beginners</strong>: Detection is like a security camera. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: email | selection: access: admin AND auth: single_factor</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Engaged Hogan Lovells, notified clients/regulators. <br> <strong>Long-term</strong>: Implemented 2FA, enhanced monitoring. <br> <strong>Beginners</strong>: Response limits damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Mar 2017), Containment (Apr 2017), Eradication (post-Apr).</td>
+                        <td class="py-2 px-4 border-b"><strong>Unconfirmed</strong>: No clear attribution to lone wolf, rival, or state actor. <br> <strong>TTPs</strong>: Phishing, weak auth align with opportunistic attacks. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: TTPs suggest targeted attack; IOCs include admin account misuse, Azure logs.</td>
+                        <td class="py-2 px-4 border-b">Enforce 2FA, email encryption. <br> Deploy SIEM, DLP, EDR. <br> Train admins on phishing. <br> Audit privileged accounts. <br> <strong>Beginners</strong>: Secure accounts, monitor systems. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for email defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
