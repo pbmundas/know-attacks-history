@@ -329,5 +329,162 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">January 2015</td>
+                        <td class="py-2 px-4 border-b">Initial access: Spear-phishing emails with malware sent to Bangladesh Bank employees.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group (North Korean hackers)</td>
+                        <td class="py-2 px-4 border-b">At least one employee opened a malicious ZIP file, installing malware.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 15, 2015</td>
+                        <td class="py-2 px-4 border-b">Money laundering preparation: Five fictitious accounts opened at Rizal Commercial Banking Corporation (RCBC) in Manila.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group accomplices</td>
+                        <td class="py-2 px-4 border-b">Accounts dormant with $500 deposits until heist; used fake IDs.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spring–Summer 2015</td>
+                        <td class="py-2 px-4 border-b">Lateral movement: Attackers map network, steal SWIFT credentials.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group</td>
+                        <td class="py-2 px-4 border-b">Undetected due to lack of monitoring; accessed SWIFTLIVE system.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">January 29, 2016</td>
+                        <td class="py-2 px-4 border-b">Pre-attack escalation: Attackers gain deeper access to SWIFT system.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group</td>
+                        <td class="py-2 px-4 border-b">Positioned for fraudulent transfers; no alerts triggered.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 4, 2016, 8:36 PM–10:30 PM (Dhaka time)</td>
+                        <td class="py-2 px-4 border-b">Heist execution: 35 fraudulent SWIFT transfer requests sent to New York Fed for $951 million.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group</td>
+                        <td class="py-2 px-4 border-b">Requests to Philippines and Sri Lanka; exploited weekend timing.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 4–5, 2016</td>
+                        <td class="py-2 px-4 border-b">Transfers processed: Five requests succeed ($101M); $81M to RCBC, $20M to Sri Lanka.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group</td>
+                        <td class="py-2 px-4 border-b">$850M blocked due to typo (“Shalika Fundation”).</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 5, 2016</td>
+                        <td class="py-2 px-4 border-b">Malware cover-up: Malware deletes transaction logs, manipulates printer output.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group</td>
+                        <td class="py-2 px-4 border-b">Delayed detection; printer failure initially dismissed as glitch.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 5–6, 2016</td>
+                        <td class="py-2 px-4 border-b">Money laundering: $81M in Philippines converted to pesos via FX broker, funneled to casinos.</td>
+                        <td class="py-2 px-4 border-b">Lazarus Group accomplices</td>
+                        <td class="py-2 px-4 border-b">Funds untraceable due to casino exemptions from AML laws.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 6, 2016</td>
+                        <td class="py-2 px-4 border-b">Detection: Printer restarted, revealing 35 transfer requests.</td>
+                        <td class="py-2 px-4 border-b">Bangladesh Bank staff</td>
+                        <td class="py-2 px-4 border-b">Panic ensued; contacted New York Fed, SWIFT.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 8, 2016</td>
+                        <td class="py-2 px-4 border-b">Attempted mitigation: Bangladesh Bank requests RCBC to freeze funds.</td>
+                        <td class="py-2 px-4 border-b">Bangladesh Bank</td>
+                        <td class="py-2 px-4 border-b">Too late; funds already laundered during Chinese New Year.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February–March 2016</td>
+                        <td class="py-2 px-4 border-b">Investigation: FireEye and others confirm North Korean involvement.</td>
+                        <td class="py-2 px-4 border-b">FireEye, U.S. agencies</td>
+                        <td class="py-2 px-4 border-b">Linked to Lazarus Group via malware and TTPs.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 6, 2016</td>
+                        <td class="py-2 px-4 border-b">RCBC fallout: President Lorenzo Tan resigns, taking “moral responsibility.”</td>
+                        <td class="py-2 px-4 border-b">RCBC</td>
+                        <td class="py-2 px-4 border-b">Internal probe launched; branch manager questioned.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 2019</td>
+                        <td class="py-2 px-4 border-b">Lawsuit: Bangladesh Bank sues RCBC in U.S. court for complicity.</td>
+                        <td class="py-2 px-4 border-b">Bangladesh Bank</td>
+                        <td class="py-2 px-4 border-b">Seeks recovery of $81M; RCBC countersues for defamation.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 2018</td>
+                        <td class="py-2 px-4 border-b">U.S. indicts Park Jin Hyok for this and other cyberattacks.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Confirmed Lazarus Group, North Korean state involvement.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 13 months (January 2015 to February 6, 2016), allowing attackers to infiltrate, map networks, steal credentials, and execute the heist undetected.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Jan 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Lateral Movement (Spring–Summer 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Collection/Exfiltration (Spring–Summer 2015)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Malware Deployment (Feb 4–5, 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection (Feb 6, 2016)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Spear-phishing with malicious ZIP file. <br><strong>What went wrong</strong>: No email filtering, weak training.</td>
+                        <td class="py-2 px-4 border-b">Navigated network, accessed SWIFT system. <br><strong>Factor</strong>: No segmentation, no IDS.</td>
+                        <td class="py-2 px-4 border-b">Stole SWIFT credentials, network data. <br><strong>Factor</strong>: No DLP or anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Deployed malware to manipulate SWIFT transactions, hide logs. <br><strong>Factor</strong>: No real-time monitoring.</td>
+                        <td class="py-2 px-4 border-b">Detected after printer restart revealed transfers. <br><strong>Total time</strong>: Enabled $101M theft.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a thief casing a bank vault for over a year, unnoticed due to lax security. Industry reports suggest median dwell times in 2016 were ~150 days; Bangladesh Bank’s 13 months was unusually long, enabling meticulous planning and execution.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Phishing delivered malware. Why successful? No email filters, weak training. Why weak? Underfunded security. Why underfunded? Developing nation priorities. Why prioritized? Budget constraints. <br> <strong>Other causes</strong>: No 2FA, no SIEM, weak SWIFT security. <br> <strong>Beginners</strong>: Root causes trace to poor defenses. <br> <strong>Experts</strong>: Fishbone factors: People (untrained staff), Process (no 2FA), Technology (no IDS).</td>
+                        <td class="py-2 px-4 border-b"><strong>Financial</strong>: $101M stolen; only $18M recovered. <br> <strong>Reputational</strong>: Damaged trust in Bangladesh banking. <br> <strong>Operational</strong>: Disrupted SWIFT operations, manual recovery. <br> <strong>Beginners</strong>: Impacts hit finances, reputation. <br> <strong>Experts</strong>: BIA metrics: RTO/RPO violated due to delayed detection.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Phishing via email filters; lateral movement via IDS; exfiltration via DLP. <br> <strong>Opportunities</strong>: Deploy 2FA, SIEM, DLP; audit SWIFT access. <br> <strong>Failures</strong>: No monitoring, ignored printer issue. <br> <strong>Beginners</strong>: Detection is like a bank alarm. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: swift | selection: transaction: unauthorized</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Contacted RCBC, SWIFT, New York Fed; engaged investigators. <br> <strong>Long-term</strong>: Improved SWIFT security, added 2FA, trained staff. <br> <strong>Beginners</strong>: Response limits damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Feb 6), Containment (Feb 8), Eradication (post-Feb).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Lazarus Group, North Korea, Park Jin Hyok (indicted 2018). <br> <strong>TTPs</strong>: Phishing, SWIFT malware, laundering align with state-sponsored actors. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: TTPs match Lazarus; IOCs include malware hashes, North Korean IPs.</td>
+                        <td class="py-2 px-4 border-b">Enforce 2FA, email filtering. <br> Segment networks, secure SWIFT. <br> Deploy SIEM, DLP, EDR. <br> Train staff on phishing. <br> Enhance AML compliance. <br> <strong>Beginners</strong>: Secure systems, educate employees. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, SWIFT CSP for defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
