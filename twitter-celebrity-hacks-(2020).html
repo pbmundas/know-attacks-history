@@ -292,5 +292,132 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Pre-July 15, 2020</td>
+                        <td class="py-2 px-4 border-b">Preparation: Hackers obtain Twitter employee credentials via phone-based spear-phishing (vishing).</td>
+                        <td class="py-2 px-4 border-b">Graham Ivan Clark (17), Mason Sheppard (19), Nima Fazeli (22)</td>
+                        <td class="py-2 px-4 border-b">Tricked employees into sharing VPN credentials; accessed internal admin tools.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 15, 2020, ~12:00 PM ET</td>
+                        <td class="py-2 px-4 border-b">Breach activation: Hackers use admin tools to hijack 130 high-profile accounts.</td>
+                        <td class="py-2 px-4 border-b">Clark, Sheppard, Fazeli</td>
+                        <td class="py-2 px-4 border-b">Took over accounts of Obama, Biden, Musk, Gates, Kardashian, Bezos; posted Bitcoin scam tweets.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 15, 2020, ~2:00 PM ET</td>
+                        <td class="py-2 px-4 border-b">Data access: Hackers download data from 7 accounts, access DMs in 36 accounts.</td>
+                        <td class="py-2 px-4 border-b">Clark, Sheppard, Fazeli</td>
+                        <td class="py-2 px-4 border-b">Private DMs and internal data exfiltrated; scam netted $120K in Bitcoin.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 15, 2020, ~3:00 PM ET</td>
+                        <td class="py-2 px-4 border-b">Containment: Twitter locks verified accounts, disables tweet functionality, limits admin tool access.</td>
+                        <td class="py-2 px-4 border-b">Twitter</td>
+                        <td class="py-2 px-4 border-b">Breach contained; public backlash, stock dip.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 15–16, 2020</td>
+                        <td class="py-2 px-4 border-b">Investigation: Twitter engages internal teams, notifies FBI.</td>
+                        <td class="py-2 px-4 border-b">Twitter/FBI</td>
+                        <td class="py-2 px-4 border-b">Confirms vishing attack; no further account takeovers.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 31, 2020</td>
+                        <td class="py-2 px-4 border-b">Arrests: Clark, Sheppard, Fazeli arrested by FBI.</td>
+                        <td class="py-2 px-4 border-b">FBI</td>
+                        <td class="py-2 px-4 border-b">Clark charged with conspiracy, wire fraud; Sheppard extradited from UK.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 2020</td>
+                        <td class="py-2 px-4 border-b">Legal proceedings: Clark pleads guilty; sentenced to 3 years.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Youngest convicted hacker; restitution ordered.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">March 2021</td>
+                        <td class="py-2 px-4 border-b">Fazeli sentenced: 3 years probation, 5 years supervised release.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">For conspiracy, unauthorized access; no prison time.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 2021</td>
+                        <td class="py-2 px-4 border-b">Sheppard sentenced: 12 months home detention.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">For conspiracy; minimal sentence due to cooperation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately hours (July 15, 2020, ~12:00–3:00 PM ET), from initial hijacking to containment, due to rapid execution but swift response.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Pre-Jul 15)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Execution/Spread (Jul 15, ~12:00 PM)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Collection/Exfiltration (Jul 15, ~2:00 PM)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Containment (Jul 15, ~3:00 PM)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Legal/Recovery (Jul 31–2021)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Vishing compromised employee credentials. <br><strong>What went wrong</strong>: No 2FA, weak vishing training.</td>
+                        <td class="py-2 px-4 border-b">Hijacked 130 accounts via admin tools. <br><strong>Factor</strong>: No segmentation, no IDS.</td>
+                        <td class="py-2 px-4 border-b">Downloaded data from 7 accounts, accessed 36 DMs. <br><strong>Factor</strong>: No DLP or anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Locked accounts, disabled tweet function. <br><strong>Factor</strong>: Rapid response, no initial SIEM.</td>
+                        <td class="py-2 px-4 border-b">Arrests, sentences; enhanced security. <br><strong>Total time</strong>: $120K stolen, reputation damage.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time (~3 hours vs. 2020 median ~95 days) was ultra-short due to rapid execution, but the attack’s impact was amplified by high-profile targets and Bitcoin scam. Weak vishing defenses and no 2FA enabled quick access; swift containment prevented further damage.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Vishing compromised credentials. Why successful? No 2FA, weak training. Why weak? Underfunded security. Why underfunded? Prioritized features. Why prioritized? Growth focus. <br> <strong>Other causes</strong>: No DLP, no SIEM. <br> <strong>Beginners</strong>: Root causes trace to human factors. <br> <strong>Experts</strong>: Fishbone factors: People (untrained staff), Process (no 2FA), Technology (no IDS).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: DMs, account data from 130 high-profile targets. <br> <strong>Financial</strong>: $120K stolen. <br> <strong>Reputational</strong>: Public embarrassment, stock dip. <br> <strong>Beginners</strong>: Impacts hit reputation, finances. <br> <strong>Experts</strong>: BIA metrics: RTO minutes for account lockout.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Vishing via call monitoring; admin access via SIEM. <br> <strong>Opportunities</strong>: 2FA, employee training, DLP. <br> <strong>Failures</strong>: No IDS, no vishing awareness. <br> <strong>Beginners</strong>: Detection is like a phone alarm. <br> <strong>Experts</strong>: Sigma rule: `detection: logsource: category: admin | selection: access: unauthorized AND method: vishing`.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Locked accounts, disabled admin tools. <br> <strong>Long-term</strong>: Enhanced 2FA, vishing training, SIEM. <br> <strong>Beginners</strong>: Response limits damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Jul 15), Containment (Jul 15), Eradication (Jul–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Clark, Sheppard, Fazeli (teen hackers). <br> <strong>TTPs</strong>: Vishing, account hijacking align with script kiddies. <br> <strong>Beginners</strong>: Attribution identifies culprits. <br> <strong>Experts</strong>: IOCs include Bitcoin wallet, admin tool logs.</td>
+                        <td class="py-2 px-4 border-b">Enforce 2FA. <br> Train on vishing. <br> Deploy SIEM, DLP. <br> Monitor admin access. <br> <strong>Beginners</strong>: Secure logins, educate staff. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for social engineering defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
