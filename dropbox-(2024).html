@@ -347,5 +347,126 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 24, 2024</td>
+                        <td class="py-2 px-4 border-b">Detection: Dropbox detects unauthorized access to Dropbox Sign production environment.</td>
+                        <td class="py-2 px-4 border-b">Unknown threat actor</td>
+                        <td class="py-2 px-4 border-b">Access via compromised service account; incident contained immediately.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 24–May 1, 2024</td>
+                        <td class="py-2 px-4 border-b">Investigation: Dropbox engages forensic teams, confirms data access.</td>
+                        <td class="py-2 px-4 border-b">Dropbox</td>
+                        <td class="py-2 px-4 border-b">No documents or agreements accessed; isolated to Sign backend.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 1, 2024</td>
+                        <td class="py-2 px-4 border-b">Public Disclosure: Dropbox announces breach affecting Dropbox Sign users.</td>
+                        <td class="py-2 px-4 border-b">Dropbox</td>
+                        <td class="py-2 px-4 border-b">Exposed emails, usernames, phone numbers, hashed passwords, API keys, OAuth tokens, MFA data; ~2.9M non-account holders affected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 2, 2024</td>
+                        <td class="py-2 px-4 border-b">Mitigation: Dropbox resets passwords, rotates API keys, logs out devices.</td>
+                        <td class="py-2 px-4 border-b">Dropbox</td>
+                        <td class="py-2 px-4 border-b">Users prompted to change passwords; enhanced security measures implemented.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 2024</td>
+                        <td class="py-2 px-4 border-b">Notifications: Dropbox begins notifying affected users and regulators.</td>
+                        <td class="py-2 px-4 border-b">Dropbox</td>
+                        <td class="py-2 px-4 border-b">SEC filing confirms incident; no evidence of data misuse.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 2024</td>
+                        <td class="py-2 px-4 border-b">Ongoing Investigation: Dropbox continues forensic analysis with third-party experts.</td>
+                        <td class="py-2 px-4 border-b">Dropbox</td>
+                        <td class="py-2 px-4 border-b">No further unauthorized access; focus on root cause.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 2024</td>
+                        <td class="py-2 px-4 border-b">Legal Fallout: Class-action lawsuits filed against Dropbox for negligence.</td>
+                        <td class="py-2 px-4 border-b">Affected users</td>
+                        <td class="py-2 px-4 border-b">Alleged failure to secure service accounts; settlements pending.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 2024</td>
+                        <td class="py-2 px-4 border-b">Regulatory Scrutiny: GDPR and CCPA investigations initiated.</td>
+                        <td class="py-2 px-4 border-b">Regulators</td>
+                        <td class="py-2 px-4 border-b">Potential fines for delayed notification; enhanced compliance measures.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 1 week (April 24 to May 1, 2024), from detection to public disclosure, due to swift containment but delayed scope confirmation.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Pre-Apr 24)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Data Exfiltration (Pre-Apr 24)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Apr 24)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Disclosure (May 1)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Recovery (May 2024+)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Compromised service account. <br><strong>What went wrong</strong>: No MFA, weak authentication.</td>
+                        <td class="py-2 px-4 border-b">Accessed customer database. <br><strong>Factor</strong>: No DLP, no anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Internal monitoring flags activity. <br><strong>Factor</strong>: Rapid containment, no initial SIEM.</td>
+                        <td class="py-2 px-4 border-b">Public announcement, user notifications. <br><strong>Factor</strong>: Scope confirmation delayed.</td>
+                        <td class="py-2 px-4 border-b">Password resets, API key rotation; lawsuits filed. <br><strong>Total time</strong>: Potential fines, regulatory scrutiny.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time (~1 week vs. 2024 median ~21 days) was short due to internal detection, but lack of MFA allowed initial access. Swift response prevented further exfiltration, but delayed disclosure amplified reputational damage.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Service account compromised. Why compromised? No MFA. Why no MFA? Policy lapse. Why lapse? Prioritized operations. Why prioritized? Cost focus. <br> <strong>Other causes</strong>: No DLP, outdated systems. <br> <strong>Beginners</strong>: Root causes trace to weak authentication. <br> <strong>Experts</strong>: Fishbone factors: Technology (no MFA), Process (no audits), People (lax policy).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: Emails, usernames, phone numbers, hashed passwords, API keys, MFA data for all users; 2.9M non-account holders. <br> <strong>Financial</strong>: Potential fines, legal costs. <br> <strong>Reputational</strong>: Trust erosion, lawsuits. <br> <strong>Beginners</strong>: Impacts hit privacy, reputation. <br> <strong>Experts</strong>: BIA metrics: RPO minimal, RTO days for resets.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Service account access via SIEM; exfiltration via DLP. <br> <strong>Opportunities</strong>: MFA, EDR, network monitoring. <br> <strong>Failures</strong>: No MFA, no anomaly detection. <br> <strong>Beginners</strong>: Detection is like alarms. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: service_account | selection: access: unauthorized AND mfa: none</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Contained access, rotated credentials. <br> <strong>Long-term</strong>: Enhanced MFA, monitoring; notified regulators. <br> <strong>Beginners</strong>: Response stops damage. <br> <strong>Experts</strong>: NIST IR followed: Identification (Apr 24), Containment (Apr 24), Eradication (May–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Unknown</strong>: No confirmed attribution; suspected financially motivated. <br> <strong>TTPs</strong>: Service account compromise, data theft. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include service account logs, stolen data hashes.</td>
+                        <td class="py-2 px-4 border-b">Enforce MFA on all accounts. <br> Deploy EDR, DLP, SIEM. <br> Monitor service accounts. <br> Conduct regular audits. <br> <strong>Beginners</strong>: Secure logins, monitor systems. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, zero-trust for SaaS.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
