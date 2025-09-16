@@ -329,5 +329,130 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Pre-June 22, 2018</td>
+                        <td class="py-2 px-4 border-b">Preparation: Attackers compromise Swissport employee credentials, likely via phishing.</td>
+                        <td class="py-2 px-4 border-b">Magecart (suspected)</td>
+                        <td class="py-2 px-4 border-b">Access to Citrix Access Gateway; no MFA enabled.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 22, 2018</td>
+                        <td class="py-2 px-4 border-b">Initial access: Attackers enter BA’s network using stolen Swissport credentials, escalate privileges with plaintext admin password.</td>
+                        <td class="py-2 px-4 border-b">Magecart</td>
+                        <td class="py-2 px-4 border-b">Access to BA’s internal systems; begin reconnaissance.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 21–September 5, 2018</td>
+                        <td class="py-2 px-4 border-b">Data theft: Malicious JavaScript injected into BA’s payment page redirects data to baways.com.</td>
+                        <td class="py-2 px-4 border-b">Magecart</td>
+                        <td class="py-2 px-4 border-b">429,612 customers affected; 244,000 card details (including CVV), 77,000 names/addresses, 612 Executive Club accounts compromised.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 5, 2018</td>
+                        <td class="py-2 px-4 border-b">Detection: Third-party security researcher alerts BA to malicious code.</td>
+                        <td class="py-2 px-4 border-b">Security researcher</td>
+                        <td class="py-2 px-4 border-b">BA removes code within 90 minutes; notifies ICO.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 6, 2018</td>
+                        <td class="py-2 px-4 border-b">Response: BA informs 380,000 affected customers, advises contacting banks.</td>
+                        <td class="py-2 px-4 border-b">BA</td>
+                        <td class="py-2 px-4 border-b">No travel/passport data stolen; public apology issued.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 4, 2019</td>
+                        <td class="py-2 px-4 border-b">ICO penalty notice: ICO proposes £183.39 million fine (1.5% of 2017 turnover) for GDPR violations.</td>
+                        <td class="py-2 px-4 border-b">ICO</td>
+                        <td class="py-2 px-4 border-b">Cites inadequate security (e.g., no MFA, no file integrity monitoring).</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 16, 2020</td>
+                        <td class="py-2 px-4 border-b">Fine reduced: ICO finalizes £20 million fine, citing COVID-19 impact.</td>
+                        <td class="py-2 px-4 border-b">ICO</td>
+                        <td class="py-2 px-4 border-b">Largest ICO fine to date; BA cooperates fully.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 6, 2021</td>
+                        <td class="py-2 px-4 border-b">Settlement: BA settles class-action lawsuit with affected customers/staff.</td>
+                        <td class="py-2 px-4 border-b">BA/PGMBM law firm</td>
+                        <td class="py-2 px-4 border-b">Confidential settlement; no admission of liability.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 21, 2025</td>
+                        <td class="py-2 px-4 border-b">Ongoing legal action: Some customers sue BA for inadequate compensation.</td>
+                        <td class="py-2 px-4 border-b">Law firm Your Lawyers</td>
+                        <td class="py-2 px-4 border-b">Claims for distress, potential fraud; largest UK group-action data claim.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 75 days (June 22 to September 5, 2018), from initial access to detection, due to undetected privilege escalation and lack of monitoring.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (Jun 22)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Spread (Aug 21–Sep 5)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Sep 5)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Sep 6–2021)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Compromised Swissport credentials via Citrix. <br><strong>What went wrong</strong>: No MFA, plaintext admin password.</td>
+                        <td class="py-2 px-4 border-b">JavaScript skims payment data to baways.com. <br><strong>Factor</strong>: No file integrity monitoring, no WAF.</td>
+                        <td class="py-2 px-4 border-b">Third-party alert; code removed in 90 minutes. <br><strong>Factor</strong>: No internal SIEM/IDS; rapid response post-detection.</td>
+                        <td class="py-2 px-4 border-b">Notified customers, settled lawsuits; enhanced security. <br><strong>Total time</strong>: £20M fine, millions in settlements.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was prolonged (75 days vs. 2018 median ~78 days) due to no MFA, poor monitoring, and supply-chain trust. Detection relied on external notification, highlighting BA’s reactive stance. Rapid code removal mitigated further damage.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Compromised Swissport credentials. Why compromised? No MFA. Why no MFA? Cost/security oversight. Why oversight? Prioritized operations. Why prioritized? Profit focus. <br> <strong>Other causes</strong>: Plaintext passwords, no file integrity monitoring. <br> <strong>Beginners</strong>: Root causes trace to weak authentication, vendor trust. <br> <strong>Experts</strong>: Fishbone factors: Process (no MFA policy), Technology (no WAF), Supply Chain (Swissport).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 429,612 customers’ data (244,000 cards, 77,000 names/addresses, 612 logins). <br> <strong>Financial</strong>: £20M fine, millions in settlements. <br> <strong>Reputational</strong>: Trust erosion, lawsuits. <br> <strong>Beginners</strong>: Impacts hit finances, reputation. <br> <strong>Experts</strong>: BIA metrics: RPO minimal, RTO days for code removal.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: JavaScript injection via WAF; privilege escalation via SIEM. <br> <strong>Opportunities</strong>: File integrity monitoring, MFA, supply-chain audits. <br> <strong>Failures</strong>: No IDS, no internal detection. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: web | selection: script_injection: magecart</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Removed malicious code, notified customers. <br> <strong>Long-term</strong>: Added MFA, WAF, file monitoring; settled lawsuits. <br> <strong>Beginners</strong>: Response restores trust. <br> <strong>Experts</strong>: NIST IR followed: Identification (Sep 5), Containment (Sep 5), Eradication (Sep 6–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: Magecart group. <br> <strong>TTPs</strong>: JavaScript skimming, supply-chain attack align with Magecart. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include baways.com, malicious script hashes.</td>
+                        <td class="py-2 px-4 border-b">Implement MFA. <br> Deploy WAF, SIEM, DLP. <br> Audit supply chain. <br> Prioritize security monitoring. <br> <strong>Beginners</strong>: Secure logins, verify vendors. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, zero-trust architecture.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
