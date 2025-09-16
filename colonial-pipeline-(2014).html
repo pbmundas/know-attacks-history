@@ -304,5 +304,145 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+        <!-- Attack Timeline -->
+        <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 29, 2021</td>
+                        <td class="py-2 px-4 border-b">Initial access: Attackers compromise a VPN account using a leaked password.</td>
+                        <td class="py-2 px-4 border-b">DarkSide (Russian-speaking cybercriminals)</td>
+                        <td class="py-2 px-4 border-b">Password from dark web; no MFA enabled.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">April 29-May 6, 2021</td>
+                        <td class="py-2 px-4 border-b">Lateral movement and data theft: Attackers move through network, steal 100GB of data.</td>
+                        <td class="py-2 px-4 border-b">DarkSide</td>
+                        <td class="py-2 px-4 border-b">Used PowerShell scripts, credential harvesting; billing systems targeted.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 6, 2021</td>
+                        <td class="py-2 px-4 border-b">Ransomware deployment: DarkSide encrypts Colonial’s IT systems.</td>
+                        <td class="py-2 px-4 border-b">DarkSide</td>
+                        <td class="py-2 px-4 border-b">Locked billing and accounting systems; demanded $4.4M in Bitcoin.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 7, 2021</td>
+                        <td class="py-2 px-4 border-b">Colonial detects breach; shuts down pipeline operations.</td>
+                        <td class="py-2 px-4 border-b">Colonial Pipeline</td>
+                        <td class="py-2 px-4 border-b">Proactively halted systems to contain threat; notified FBI, Mandiant.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 7, 2021</td>
+                        <td class="py-2 px-4 border-b">Ransom payment: Colonial pays $4.4M (75 Bitcoin) for decryption tool.</td>
+                        <td class="py-2 px-4 border-b">Colonial/DarkSide</td>
+                        <td class="py-2 px-4 border-b">Tool slow, recovery delayed; payment criticized.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 9, 2021</td>
+                        <td class="py-2 px-4 border-b">Emergency declared: Biden administration issues regional fuel transport waivers.</td>
+                        <td class="py-2 px-4 border-b">U.S. Government</td>
+                        <td class="py-2 px-4 border-b">Fuel shortages in 17 states; panic buying begins.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 10, 2021</td>
+                        <td class="py-2 px-4 border-b">FBI confirms DarkSide as attacker; recovery efforts intensify.</td>
+                        <td class="py-2 px-4 border-b">FBI/Colonial</td>
+                        <td class="py-2 px-4 border-b">DarkSide issues statement; pipeline restart planned.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 12, 2021</td>
+                        <td class="py-2 px-4 border-b">Pipeline operations restart after partial recovery.</td>
+                        <td class="py-2 px-4 border-b">Colonial Pipeline</td>
+                        <td class="py-2 px-4 border-b">Gradual resumption; fuel shortages persist.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 15, 2021</td>
+                        <td class="py-2 px-4 border-b">Full pipeline operations restored.</td>
+                        <td class="py-2 px-4 border-b">Colonial Pipeline</td>
+                        <td class="py-2 px-4 border-b">Normal fuel deliveries resume; shortages ease.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 7, 2021</td>
+                        <td class="py-2 px-4 border-b">FBI recovers 63.7 Bitcoin from ransom payment.</td>
+                        <td class="py-2 px-4 border-b">FBI</td>
+                        <td class="py-2 px-4 border-b">Court-approved clawback; financial loss mitigated.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">June 8, 2021</td>
+                        <td class="py-2 px-4 border-b">CEO testifies: Joseph Blount explains ransom decision to Senate.</td>
+                        <td class="py-2 px-4 border-b">Colonial Pipeline</td>
+                        <td class="py-2 px-4 border-b">“Right thing for the country”; exposed security gaps.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 8 days (April 29 to May 7, 2021), the period attackers operated undetected in Colonial’s network, allowing data theft and ransomware deployment.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (April 29)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Lateral Movement (April 29-May 6)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Collection/Exfiltration (April 29-May 6)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Ransomware Deployment (May 6)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection (May 7)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Compromised VPN password (no MFA). <br><strong>What went wrong</strong>: Password reuse, no 2FA.</td>
+                        <td class="py-2 px-4 border-b">Moved laterally using stolen credentials. <br><strong>Factor</strong>: No network segmentation.</td>
+                        <td class="py-2 px-4 border-b">Stole 100GB of data; prepared ransomware. <br><strong>Factor</strong>: No DLP or anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">Deployed ransomware, locking IT systems. <br><strong>Factor</strong>: No real-time malware detection.</td>
+                        <td class="py-2 px-4 border-b">Detected after systems locked; pipeline shut down. <br><strong>Total time</strong>: Disrupted critical infrastructure.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a thief slipping through an unlocked gate, unnoticed due to weak authentication. Experts: Median dwell time in 2021 was ~21 days (Mandiant); Colonial’s 8 days was short but impactful due to critical infrastructure targeting.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Compromised VPN password. Why compromised? Leaked on dark web, no MFA. Why no MFA? Weak security policies. Why weak? Underfunded cybersecurity. Why underfunded? Prioritized operations. <br> <strong>Other causes</strong>: No network segmentation, no DLP, weak monitoring. <br> <strong>Beginners</strong>: Root causes trace security gaps. <br> <strong>Experts</strong>: Fishbone factors: People (security oversight), Process (no MFA), Technology (no DLP).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 100GB stolen; billing systems locked. <br> <strong>Financial</strong>: $4.4M ransom, millions in recovery costs. <br> <strong>Reputational</strong>: Public distrust; criticized for ransom payment. <br> <strong>Operational</strong>: 6-day shutdown, fuel shortages, $3/gallon price spike. <br> <strong>Beginners</strong>: Impacts disrupt lives. <br> <strong>Experts</strong>: BIA metrics: RTO violated due to slow recovery.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: VPN access detectable via SIEM; data exfiltration via DLP; ransomware via EDR. <br> <strong>Opportunities</strong>: Deploy MFA, segment networks, use DLP/EDR. <br> <strong>Failures</strong>: No 2FA, ignored monitoring gaps. <br> <strong>Beginners</strong>: Detection is like a smoke alarm. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: vpn | selection: event: login AND MFA: false</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Paid ransom, shut down pipeline, engaged Mandiant, FBI. <br> <strong>Long-term</strong>: Implemented MFA, DLP, network segmentation; hired CISO. <br> <strong>Beginners</strong>: Response is cleanup. <br> <strong>Experts</strong>: NIST IR followed: Identification (May 7), Containment (May 7), Eradication (post-May).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: DarkSide (Russian-speaking, per FBI). <br> <strong>TTPs</strong>: Phishing, ransomware, data theft align with cybercrime groups. <br> <strong>Beginners</strong>: Attribution is identifying culprits. <br> <strong>Experts</strong>: TTPs match DarkSide’s RaaS model; IOCs include ransomware hashes.</td>
+                        <td class="py-2 px-4 border-b">Enforce MFA for VPNs. <br> Segment networks. <br> Deploy DLP/EDR. <br> Fund cybersecurity. <br> Plan incident response. <br> <strong>Beginners</strong>: Secure access, monitor systems. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for critical infrastructure defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
