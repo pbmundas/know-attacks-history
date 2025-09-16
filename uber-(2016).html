@@ -293,5 +293,132 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 2016</td>
+                        <td class="py-2 px-4 border-b">Initial access: Hackers use stolen GitHub credentials to access private repository containing AWS S3 access key.</td>
+                        <td class="py-2 px-4 border-b">Brandon Charles Glover, Vasile Mereacre (teen hackers)</td>
+                        <td class="py-2 px-4 border-b">Credentials obtained from dark web; key granted access to unencrypted S3 bucket.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">October 24-28, 2016</td>
+                        <td class="py-2 px-4 border-b">Data collection: Hackers access S3 bucket, download 57 million user records and 600,000 driver license numbers.</td>
+                        <td class="py-2 px-4 border-b">Glover, Mereacre</td>
+                        <td class="py-2 px-4 border-b">Unencrypted data included names, emails, phone numbers; no credit card data affected.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Late October 2016</td>
+                        <td class="py-2 px-4 border-b">Ransom demand: Hackers contact Uber’s Chief Security Officer Joseph Sullivan, demanding $100,000 Bitcoin payment.</td>
+                        <td class="py-2 px-4 border-b">Glover, Mereacre</td>
+                        <td class="py-2 px-4 border-b">Threat to release data; Sullivan negotiates via encrypted chat.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 2016</td>
+                        <td class="py-2 px-4 border-b">Ransom payment and cover-up: Uber pays $100,000 in Bitcoin, disguised as bug bounty; hackers sign NDAs.</td>
+                        <td class="py-2 px-4 border-b">Uber (Sullivan)</td>
+                        <td class="py-2 px-4 border-b">Payment made; hackers claim no data retained; breach concealed from FTC. |
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 2016–November 2017</td>
+                        <td class="py-2 px-4 border-b">Cover-up continues: Uber conceals breach during FTC investigation into 2014 breach.</td>
+                        <td class="py-2 px-4 border-b">Uber (Sullivan)</td>
+                        <td class="py-2 px-4 border-b">No public disclosure; internal investigation suppressed. |
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">November 21, 2017</td>
+                        <td class="py-2 px-4 border-b">Public disclosure: Uber announces breach affecting 57 million users and drivers.</td>
+                        <td class="py-2 px-4 border-b">Uber</td>
+                        <td class="py-2 px-4 border-b">Password resets, notifications; stock drops 3%. |
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 2017</td>
+                        <td class="py-2 px-4 border-b">Investigation and fallout: Uber fires Sullivan; FTC investigation intensifies.</td>
+                        <td class="py-2 px-4 border-b">Uber/FTC</td>
+                        <td class="py-2 px-4 border-b">Sullivan charged with obstruction; $148M fine in 2018. |
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">September 2019</td>
+                        <td class="py-2 px-4 border-b">Legal resolution: Glover and Mereacre plead guilty to hacking charges.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Sentenced to time served; restitution ordered. |
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">December 2022</td>
+                        <td class="py-2 px-4 border-b">Sullivan convicted: Guilty of obstruction and misprision of felony for concealing breach.</td>
+                        <td class="py-2 px-4 border-b">U.S. DOJ</td>
+                        <td class="py-2 px-4 border-b">Sentenced to 3 years probation; $100K fine. |
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 1 month (October 24 to November 21, 2017, from detection to disclosure, but operational dwell was ~1 week from access to ransom), allowing data theft and negotiation undetected.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (October 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection (October 24-28, 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Ransom Demand (Late October 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Payment/Cover-up (November 2016)</th>
+                        <th class="py-2 px-4 border-b">Step 5: Detection/Disclosure (November 21, 2017)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Stolen GitHub credentials access AWS key. <br><strong>What went wrong</strong>: No MFA on GitHub, leaked credentials.</td>
+                        <td class="py-2 px-4 border-b">Downloaded 57M user records from S3 bucket. <br><strong>Factor</strong>: Unencrypted data, no DLP.</td>
+                        <td class="py-2 px-4 border-b">Contacted Sullivan, demanded $100K Bitcoin. <br><strong>Factor</strong>: No incident response plan for ransomware.</td>
+                        <td class="py-2 px-4 border-b">Paid ransom, signed NDAs to conceal. <br><strong>Factor</strong>: FTC investigation ongoing.</td>
+                        <td class="py-2 px-4 border-b">Public disclosure after internal review. <br><strong>Total time</strong>: Exposed 57M records, led to legal fallout.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time was like a thief breaking in and looting undetected, enabled by poor credential hygiene. Median dwell time in 2016 was ~100 days (Mandiant); Uber’s short operational dwell was amplified by cover-up, leading to prolonged legal impact.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Stolen GitHub credentials. Why stolen? Leaked on dark web. Why leaked? No credential rotation. Why no rotation? Weak password policies. Why weak? Underfunded security. <br> <strong>Other causes</strong>: No MFA, unencrypted S3, no DLP. <br> <strong>Beginners</strong>: Root causes trace to credential mismanagement. <br> <strong>Experts</strong>: Fishbone factors: People (poor hygiene), Process (no rotation), Technology (no MFA).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 57M user records, 600K driver licenses. <br> <strong>Financial</strong>: $100K ransom, $148M FTC fine. <br> <strong>Reputational</strong>: Trust erosion; Sullivan convicted. <br> <strong>Legal</strong>: FTC probe, criminal charges. <br> <strong>Beginners</strong>: Impacts hit privacy, finances. <br> <strong>Experts</strong>: BIA metrics: RTO delayed by cover-up.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: S3 access via cloud logs; credential use via SIEM; exfiltration via DLP. <br> <strong>Opportunities</strong>: Enforce MFA, rotate credentials, encrypt S3. <br> <strong>Failures</strong>: Ignored leaks, no incident reporting. <br> <strong>Beginners</strong>: Detection is like a lock. <br> <strong>Experts</strong>: Sigma rule: `detection: logsource: category: cloud | selection: event: s3_access AND User: unauthorized`.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Paid ransom, concealed breach. <br> <strong>Long-term</strong>: Fired Sullivan, implemented MFA, DLP; FTC consent decree. <br> <strong>Beginners</strong>: Response is damage control. <br> <strong>Experts</strong>: NIST IR followed: Identification (Nov 2016), Containment (2017), Eradication (post-2017).</td>
+                        <td class="py-2 px-4 border-b"><strong>Confirmed</strong>: Teen hackers (Glover, Mereacre); convicted 2019. <br> <strong>TTPs</strong>: Credential theft, S3 access align with script kiddie tactics. <br> <strong>Beginners</strong>: Attribution identifies culprits. <br> <strong>Experts</strong>: TTPs match opportunistic hackers; IOCs include GitHub leaks, S3 access patterns.</td>
+                        <td class="py-2 px-4 border-b">Enforce MFA, credential rotation. <br> Encrypt cloud storage. <br> Deploy DLP, SIEM. <br> Report incidents promptly. <br> Train on dark web risks. <br> <strong>Beginners</strong>: Secure credentials, monitor cloud. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK for cloud defense.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
