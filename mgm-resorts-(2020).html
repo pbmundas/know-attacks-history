@@ -329,5 +329,124 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+        <div class="mt-8 p-4 bg-white rounded-md shadow space-y-6">
+
+  <!-- Attack Timeline -->
+  <section>
+          <h2 class="text-2xl font-semibold mb-4">Attack Timeline</h2>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Date/Time</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                        <th class="py-2 px-4 border-b">Actor/Details</th>
+                        <th class="py-2 px-4 border-b">Evidence/Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">~July 7, 2019</td>
+                        <td class="py-2 px-4 border-b">Initial access: Unauthorized access to MGM's cloud server.</td>
+                        <td class="py-2 px-4 border-b">Unknown actor, possibly linked to GnosticPlayers</td>
+                        <td class="py-2 px-4 border-b">Exploited employee credentials via credential stuffing; accessed 10.6M guest records.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">July 24, 2019</td>
+                        <td class="py-2 px-4 border-b">Data purchase: MGM buys stolen data from attacker.</td>
+                        <td class="py-2 px-4 border-b">MGM Resorts</td>
+                        <td class="py-2 px-4 border-b">Purchased dataset to assess damage; data deemed poorly formatted, not readily usable.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">August 2019</td>
+                        <td class="py-2 px-4 border-b">Notification: MGM notifies affected guests.</td>
+                        <td class="py-2 px-4 border-b">MGM Resorts</td>
+                        <td class="py-2 px-4 border-b">Notified customers per state laws; offered credit monitoring to some.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 19, 2020</td>
+                        <td class="py-2 px-4 border-b">Public exposure: Stolen data posted on hacking forum.</td>
+                        <td class="py-2 px-4 border-b">Under the Breach/ZDNet</td>
+                        <td class="py-2 px-4 border-b">10.6M records, 3.1M unique emails exposed; included celebrities, CEOs, officials.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">February 21, 2020</td>
+                        <td class="py-2 px-4 border-b">Lawsuit filed: Class-action lawsuit initiated against MGM.</td>
+                        <td class="py-2 px-4 border-b">Plaintiff John Smallman</td>
+                        <td class="py-2 px-4 border-b">Alleges negligence in securing customer data; case filed in U.S. District Court, Nevada.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Mid-2020</td>
+                        <td class="py-2 px-4 border-b">Dark web sale: 142M records offered for sale.</td>
+                        <td class="py-2 px-4 border-b">Unknown actor</td>
+                        <td class="py-2 px-4 border-b">Superset of 2019 data with 25M unique emails; likely from same incident.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">May 2022</td>
+                        <td class="py-2 px-4 border-b">Data shared: Expanded dataset shared on Telegram.</td>
+                        <td class="py-2 px-4 border-b">Unknown actor</td>
+                        <td class="py-2 px-4 border-b">142M records, 25M unique emails; confirmed link to 2019 breach.</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">January 22, 2025</td>
+                        <td class="py-2 px-4 border-b">Settlement: $45M class-action settlement approved.</td>
+                        <td class="py-2 px-4 border-b">MGM Resorts</td>
+                        <td class="py-2 px-4 border-b">Covers 2019 and 2023 breaches; tiered payouts ($20–$75) based on data exposed.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dwell Time Analysis -->
+        <h2 class="text-2xl font-semibold mb-4">Dwell Time Analysis</h2>
+        <p class="mb-4">Dwell time was approximately 2–3 weeks (~July 7 to July 24, 2019), from initial access to detection, due to rapid response after unauthorized access was identified.</p>
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Step 1: Initial Access (~Jul 7, 2019)</th>
+                        <th class="py-2 px-4 border-b">Step 2: Collection/Spread (Jul 7–24, 2019)</th>
+                        <th class="py-2 px-4 border-b">Step 3: Detection/Containment (Jul 24, 2019)</th>
+                        <th class="py-2 px-4 border-b">Step 4: Recovery (Jul 2019–2025)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Credential stuffing on cloud server. <br><strong>What went wrong</strong>: No MFA, weak third-party platform security.</td>
+                        <td class="py-2 px-4 border-b">10.6M records exfiltrated. <br><strong>Factor</strong>: No DLP, no anomaly detection.</td>
+                        <td class="py-2 px-4 border-b">MGM detects breach, purchases data. <br><strong>Factor</strong>: Internal detection; rapid containment via purchase.</td>
+                        <td class="py-2 px-4 border-b">Notified customers, settled lawsuits, enhanced security. <br><strong>Total time</strong>: $45M settlement, reputation damage.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mb-4"><strong>Dwell Time Insight</strong>: The dwell time (~14–21 days vs. 2019 median ~78 days) was relatively short due to MGM’s detection and data purchase, but public exposure in 2020 amplified damage. Lack of MFA and weak third-party platform security enabled access; rapid containment limited further exfiltration.</p>
+
+        <!-- Learnings -->
+        <h2 class="text-2xl font-semibold mb-4">Learnings</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="py-2 px-4 border-b">Root Cause Analysis</th>
+                        <th class="py-2 px-4 border-b">Impact Assessment</th>
+                        <th class="py-2 px-4 border-b">Detection Opportunities</th>
+                        <th class="py-2 px-4 border-b">Response and Remediation</th>
+                        <th class="py-2 px-4 border-b">Attribution Analysis</th>
+                        <th class="py-2 px-4 border-b">Lessons Learned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b"><strong>Using 5 Whys</strong>: Why breached? Credential stuffing. Why possible? No MFA. Why no MFA? Weak third-party platform. Why weak? No security audit. Why no audit? Cost focus. <br> <strong>Other causes</strong>: No DLP, outdated cloud security. <br> <strong>Beginners</strong>: Root causes trace to weak logins, poor cloud setup. <br> <strong>Experts</strong>: Fishbone factors: Process (no audits), Technology (no MFA), Third-Party (platform flaw).</td>
+                        <td class="py-2 px-4 border-b"><strong>Data</strong>: 10.6M–142M records, 3.1M–25M emails, 1,300 sensitive IDs. <br> <strong>Financial</strong>: $45M settlement, legal costs. <br> <strong>Reputational</strong>: Trust erosion, lawsuits. <br> <strong>Beginners</strong>: Impacts hit finances, reputation. <br> <strong>Experts</strong>: BIA metrics: RPO months, RTO years for recovery.</td>
+                        <td class="py-2 px-4 border-b"><strong>Missed</strong>: Credential stuffing via IDS; exfiltration via DLP. <br> <strong>Opportunities</strong>: MFA, cloud monitoring, third-party audits. <br> <strong>Failures</strong>: No IDS, no DLP. <br> <strong>Beginners</strong>: Detection is like antivirus. <br> <strong>Experts</strong>: Sigma rule: <code>detection: logsource: category: cloud | selection: access: unauthorized AND method: credential_stuffing</code>.</td>
+                        <td class="py-2 px-4 border-b"><strong>Immediate</strong>: Purchased data, notified customers. <br> <strong>Long-term</strong>: Added MFA, DLP, settled lawsuits. <br> <strong>Beginners</strong>: Response restores trust. <br> <strong>Experts</strong>: NIST IR followed: Identification (Jul 24), Containment (Jul–Aug), Eradication (Aug–).</td>
+                        <td class="py-2 px-4 border-b"><strong>Suspected</strong>: GnosticPlayers (hacking group). <br> <strong>TTPs</strong>: Credential stuffing, cloud server exploit. <br> <strong>Beginners</strong>: Attribution identifies hackers. <br> <strong>Experts</strong>: IOCs include forum posts, stolen dataset hashes.</td>
+                        <td class="py-2 px-4 border-b">Implement MFA. <br> Deploy DLP, cloud monitoring. <br> Audit third-party platforms. <br> Enhance incident response. <br> <strong>Beginners</strong>: Secure logins, monitor clouds. <br> <strong>Experts</strong>: Adopt MITRE ATT&CK, zero-trust for cloud.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
